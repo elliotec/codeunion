@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Codeunion::Application.config.secret_key_base = '0e6012295935b14ab298c1a0fe25b701a2a7738b72f0adea59b970fda8bad9b510b93ab3b3adc6dca8a7d4ded659504a173c81545b4cc369fe7cdcf54070892f'
+Codeunion::Application.config.secret_key_base = 'c89ad96baaaf0727ff1ce3fbc6c4d29371a0e950ec7b0e8c582432d0c535efc02e83d454fed812b6d97b981b94b0872980c5ca0b9a0a72659ae7e351b9f61e1d'
