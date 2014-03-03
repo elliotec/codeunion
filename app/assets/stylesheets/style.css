@@ -3,7 +3,7 @@ html, body {
   background-color: #eee;
 }
 html {
-  background-color: #252733;
+  background-color: #1C2B36;
 }
 body {
   color: #3e4258;
@@ -515,10 +515,11 @@ body {
   margin: 0;
   -webkit-transition: .3s;
   transition: .3s;
-  background-color: #393e5a;
+  background-color: #3BC0C3;
 }
 .navbar a.navbar-brand:hover {
-  background-color: #30344d;
+  background-color: #1C2B36;
+  color:#3BC0C3;
 }
 .navbar a.navbar-brand i {
   text-align: center;
@@ -582,7 +583,7 @@ body {
 .navbar .navbar-nav {
   margin: 0;
   width: 100%;
-  background-color: #252733;
+  background-color: #1C2B36;
 }
 .navbar .navbar-nav li {
   height: 60px;
@@ -657,7 +658,7 @@ body {
   overflow: auto;
 }
 #navbar .navbar-header {
-  background-color: #393e5a;
+  background-color: #3BC0C3;
   height: 50px;
 }
 #navbar .navbar-toggle {
