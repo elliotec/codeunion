@@ -1186,7 +1186,7 @@ img.placeholder {
   text-align: center;
 }
 @media (max-width: 768px)  {
-  .pricing .wrapper: hover {
+  .pricing .wrapper:hover {
   margin-top: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
