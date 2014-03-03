@@ -11,17 +11,14 @@
         <ul class="nav navbar-nav">
           <!-- This hidden one just makes scrollspy reset when going above the team section -->
           <li style="display: none;"><a href="corporate.html#home"></a></li>
-          <li><a class="scroll" href="corporate.html#team"><i class="icon-user"></i>TEAM<span class="arrow-left"></span></a></li>
-          <li><a class="scroll" href="corporate.html#services"><i class="icon-gear"></i>SERVICES<span class="arrow-left"></span></a></li>
-          <li><a class="scroll" href="corporate.html#work"><i class="icon-briefcase"></i>WORK<span class="arrow-left"></span></a></li><li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "LANGUAGES", languages_path %></li>
+          <li><%= link_to "WAYS", ways_path %></li>
         <% if user_signed_in? %>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
           <li><%= link_to "Account Settings", edit_user_registration_path %></li>
         <% else %>
           <li><%= link_to "Sign in", new_user_session_path %></li>
         <% end %>
-          <li><a class="scroll" href="corporate.html#contact"><i class="icon-comments"></i>CONTACT<span class="arrow-left"></span></a></li>
-          <li><a href="features.html"><i class="icon-plus"></i>FEATURES<span class="arrow-left"></span></a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
