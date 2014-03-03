@@ -3,7 +3,8 @@ require "test_helper"
 feature "creating a user account" do
   scenario "user creating an account" do
     visit "/"
-    click_on "Sign Up"
+    save_and_open_page
+    click_on "Sign up"
     fill_in "Email",  with: "email@email.com"
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
