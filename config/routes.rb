@@ -4,4 +4,5 @@ Codeunion::Application.routes.draw do
 
   resources :languages
   root "welcome#index"
+  get "test", to: "welcome#test"
 end
