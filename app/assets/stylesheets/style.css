@@ -518,8 +518,8 @@ body {
   background-color: #3BC0C3;
 }
 .navbar a.navbar-brand:hover {
-  background-color: #1C2B36;
-  color:#3BC0C3;
+  background-color: #3892EA;
+  color:#333;
 }
 .navbar a.navbar-brand i {
   text-align: center;
