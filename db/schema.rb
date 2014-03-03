@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140303215941) do
+ActiveRecord::Schema.define(version: 20140303230939) do
 
   create_table "languages", force: true do |t|
     t.string   "name"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140303215941) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "language_id"
+    t.string   "category"
   end
 
 end

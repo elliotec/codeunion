@@ -7,3 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Language.create(name: "Ruby")
+Language.create(name: "Python")
+Language.create(name: "Javascript")
+Language.create(name: "PHP")
+Language.create(name: "Objective-C")
+Language.create(name: "Java")
