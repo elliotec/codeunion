@@ -16,6 +16,9 @@ group :development, :test do
   gem 'simplecov'
   gem 'launchy'
   gem 'sqlite3'
+  gem 'minitest-rails-capybara'
+  gem 'better_errors'
+
 end
 
 group :production do
