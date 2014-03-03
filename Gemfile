@@ -7,7 +7,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'minitest-rails-capybara'
 gem 'devise'
 gem 'bootstrap-sass'
 
@@ -18,6 +17,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'minitest-rails-capybara'
   gem 'better_errors'
+  gem 'binding_of_caller'
 
 end
 
