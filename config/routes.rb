@@ -2,5 +2,5 @@ Codeunion::Application.routes.draw do
   resources :ways
 
   resources :languages
-  root "languages#index"
+  root "welcome#index"
 end
