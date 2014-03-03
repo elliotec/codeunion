@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'minitest-rails-capybara'
 gem 'devise'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'turn'
