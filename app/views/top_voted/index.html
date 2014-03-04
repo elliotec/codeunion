@@ -1,6 +1,6 @@
 <h1>Top <%= @language.name %> <%= @category.name %></h1>
 <ul>
   <% @resources.each do |resource| %>
-  <li><%= resource.name %></li>
+  <li><h3><%= link_to resource.name, resource %></h3></li>
   <% end %>
 </ul>
