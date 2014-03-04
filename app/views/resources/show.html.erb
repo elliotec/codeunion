@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<h2>Name: <%= @resource.name %></h2>
+<h2>Body <%= @resource.body %></h2>
+<h2>Language: <%= @resource.language %></h2>
+<h2>Category: <%= @resource.category %></h2>
 <%= link_to 'Edit', edit_resource_path(@resource) %> |
 <%= link_to 'Back', resources_path %>
+<%= link_to 'Destroy', @resource, method: :delete, data: { confirm: 'Are you sure?' } %>

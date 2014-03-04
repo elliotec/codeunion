@@ -16,6 +16,9 @@
   <%= f.label :body %>
   <%= f.text_field :body %>
 
+  <%= f.select :category, CATEGORIES['array'] %>
+  <%= f.select :language, LANGUAGES['array'] %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
