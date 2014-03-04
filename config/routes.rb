@@ -1,7 +1,9 @@
 Codeunion::Application.routes.draw do
   devise_for :users
-  resources :ways
 
-  resources :languages
+  resources :languages do
+    resources :ways 
+  end
+
   root "welcome#index"
 end
