@@ -11,3 +11,4 @@
 </ul>
 <%= link_to 'Edit', edit_language_path(@language) %> |
 <%= link_to 'Back', languages_path %>
+<%= link_to 'Delete', language_path(@language), method: :delete, data: { confirm: 'Are you sure?'} %>
