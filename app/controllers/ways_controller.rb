@@ -69,6 +69,6 @@ class WaysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def way_params
-      params.require(:way).permit(:name)
+      params.require(:way).permit(:name, :language_id, :category)
     end
 end

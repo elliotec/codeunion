@@ -1,8 +1,4 @@
-# Read about fixtures at
-# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  name: MyString
-
-two:
-  name: MyString
+mooc:
+  name: mooc
+  language_id: 1
+  category: mooc

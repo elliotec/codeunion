@@ -10,6 +10,7 @@ class LanguagesController < ApplicationController
   # GET /languages/1
   # GET /languages/1.json
   def show
+    @ways = Way.where(language_id: params[:id])
   end
 
   # GET /languages/new
@@ -69,6 +70,6 @@ class LanguagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def language_params
-      params.require(:language).permit(:name)
+      params.require(:language).permit(:name, :description)
     end
 end

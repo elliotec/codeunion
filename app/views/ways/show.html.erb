@@ -5,5 +5,15 @@
   <%= @way.name %>
 </p>
 
+<p>
+  <strong>Language:</strong>
+  <%= @way.language_id %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @way.category %>
+</p>
+
 <%= link_to 'Edit', edit_way_path(@way) %> |
 <%= link_to 'Back', ways_path %>

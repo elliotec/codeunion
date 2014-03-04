@@ -15,7 +15,12 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+  <%= f.label "Language: " %>
+  <%= f.collection_select :language_id, Language.all, :id, :name, class: "form-control" %>
+  <%= f.label :category %>
+  <%= f.select :category, ['book','video','mooc', 'tutorial', 'bootcamp', 'blog post', 'game', 'university'] %>
   <div class="actions">
+
     <%= f.submit %>
   </div>
 <% end %>
