@@ -9,6 +9,7 @@ gem 'rails', '4.0.3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks', '2.2.1'
 gem 'uglifier', '>= 1.3.0'
+gem 'minitest-rails'
 
 
 group :development, :test do
@@ -18,7 +19,7 @@ group :development, :test do
   gem 'minitest-rails-capybara', '0.10.0'
   gem 'simplecov', '0.8.2'
   gem 'sqlite3', '1.3.9'
-  gem 'turn', '0.9.6'
+  gem 'turn'
 end
 
 group :production do
