@@ -10,8 +10,9 @@
   <div class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
       <li style="display: none;"><a href="corporate.html#home"></a></li>
-      <li class="<%= 'active' if params[:controller] == 'resources' %>"><%= link_to "resources", resources_path %></li>
-      
+      <li class="<%= 'active' if params[:controller] == 'resources' %>"><%= link_to "RESOURCES", resources_path %></li>
+      <li><a href="languages">LANGUAGES</a></li>
+
     <% if user_signed_in? %>
       <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       <li><%= link_to "Account Settings", edit_user_registration_path %></li>

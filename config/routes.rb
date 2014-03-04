@@ -4,8 +4,9 @@ Codeunion::Application.routes.draw do
   devise_for :users
 
   resources :languages do
-    resources :ways 
+    resources :ways
   end
 
+  get "languages", to: "languages#index"
   root "welcome#index"
 end
