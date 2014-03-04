@@ -1,3 +1,7 @@
 ruby:
   name: ruby
   description: the best language evaaaarrrrrr
+
+js:
+  name: JavaScript
+  description: the worst language evaaarrrr
