@@ -13,3 +13,11 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
   fixtures :all
 end
+
+  def sign_in
+    visit "/"
+    click_on "Sign in"
+    fill_in "Email", with: users(:one).email
+    fill_in "Password", with: "password"
+    click_button "Sign in"
+  end
