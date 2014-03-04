@@ -3,7 +3,13 @@
   <div class="container">
     <div class="content">
       <div class="row">
-        <!-- loop here -->
+        <tbody>
+          <% LANGUAGES['array'].each do |language| %>
+          <tr>
+            <td><h2><%= link_to "#{language}", language %></h2></td>
+          </tr>
+          <% end %>
+        </tbody>
       </div>
       </div><!-- /.content -->
     </div>
