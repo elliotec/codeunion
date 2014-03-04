@@ -1,14 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @language.name %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @language.description %>
-</p>
-
+<h1><%= @language.name %></h1>
+<br>
+<em><%= @language.description %></em>
+<hr>
+<ul>
+  <% @ways.each do |way| %>
+  <li><h2><%= link_to way.name, way %></h2></li>
+  <li>Language ID: <%= way.language_id %></li>
+  <li>Cateory:<%= way.category %></li>
+  <% end %>
+</ul>
 <%= link_to 'Edit', edit_language_path(@language) %> |
 <%= link_to 'Back', languages_path %>

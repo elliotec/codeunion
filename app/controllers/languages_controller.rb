@@ -10,6 +10,7 @@ class LanguagesController < ApplicationController
   # GET /languages/1
   # GET /languages/1.json
   def show
+    @ways = Way.where(language_id: params[:id])
   end
 
   # GET /languages/new
