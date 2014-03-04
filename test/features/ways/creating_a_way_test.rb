@@ -2,7 +2,7 @@
 
 # feature "Creating a way" do
 #   scenario "a way can be created" do
-#     visit new_way_path
+#     visit new_language_way_path
 #     fill_in "Name", with: ways(:mooc).name
 #     select("ruby", :from => "way_Language:")
 #     select("mooc", :from => "Category")
