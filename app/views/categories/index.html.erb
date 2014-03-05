@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+<div id="services" class="section">
+  <div class="fixed-wrapper"><h1>Categories</h1></div>
+  <div class="container">
+    <div class="content">
+      <div class="row">
+        <% @categories.each do |category| %>
+          <%= link_to category do %>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="service block">
+                <div class="icon-wrapper blue">
+                  <span class="valign"></span>
+                </div>
+                <h3><%= category.name %></h3>
+                <p><%= link_to 'Edit', edit_category_path(category) %> </p>
+              </div>
+              <br>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= link_to 'New Category', new_category_path, class: "btn btn-small" %>
+=======
 <h1>Listing categories</h1>
 
 <table>
@@ -31,3 +57,4 @@
 <% if can? :create, @category %>
   <%= link_to 'New Category', new_category_path %>
 <% end %>
+>>>>>>> b2aab5c6bf7894ba5b0a0c60b171e1a711119bd7

@@ -8,6 +8,8 @@ class LanguagesController < ApplicationController
   end
 
   def show
+    # raise 'your hands'
+    @resources = Resource.where(language_id: params[:id])
   end
 
   def new

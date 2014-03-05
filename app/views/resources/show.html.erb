@@ -1,8 +1,27 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 <h2>Name: <%= @resource.name %></h2>
-<h2>Body <%= @resource.body %></h2>
+ -->
+
+
+
+
+<div id="services" class="section">
+  <div class="fixed-wrapper"><h1><%= @resource.name %></h1></div>
+  <div class="container">
+    <div class="content">
+      <div class="row">
+        <!-- resource loop begin -->
+
+        <p><%= @resource.body %></p>
 <h2>Language: <%= @resource.language_id %></h2>
 <h2>Category: <%= @resource.category_id %></h2>
-<%= link_to 'Edit', edit_resource_path(@resource) %> |
+
+        <%= link_to 'Edit', edit_resource_path(@resource) %> |
 <%= link_to 'Back', resources_path %>
 <%= link_to 'Destroy', @resource, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+        <!-- resource loop end -->
+      </div>
+      </div><!-- /.content -->
+    </div>
+  </div>
