@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action :load_category, only: :create
   load_and_authorize_resource
 
   def index
@@ -17,8 +18,6 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(category_params)
-
     respond_to do |format|
       if @category.save
         format.html { redirect_to @category, notice: 'Category was successfully created.' }
@@ -57,5 +56,9 @@ class CategoriesController < ApplicationController
 
     def category_params
       params.require(:category).permit(:name)
+    end
+
+    def load_category
+      @category = Category.new(category_params)
     end
 end
