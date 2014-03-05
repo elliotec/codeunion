@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'bootstrap-sass', '3.1.0.2'
+gem 'cancan'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise', '3.2.3'
 gem 'jbuilder', '~> 1.2'
@@ -10,6 +11,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks', '2.2.1'
 gem 'uglifier', '>= 1.3.0'
 gem 'minitest-rails'
+gem 'acts_as_votable', '~> 0.8.0'
 
 
 group :development, :test do
