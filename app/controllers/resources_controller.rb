@@ -1,4 +1,5 @@
 class ResourcesController < ApplicationController
+  before_action :load_resource, only: :create
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
@@ -57,5 +58,9 @@ class ResourcesController < ApplicationController
 
     def resource_params
       params.require(:resource).permit(:name, :body, :language_id, :category_id)
+    end
+
+    def load_resource
+      @resource = Resource.new(resource_params)
     end
 end
