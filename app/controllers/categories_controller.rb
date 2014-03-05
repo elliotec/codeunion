@@ -8,6 +8,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @resources = Resource.where(category_id: params[:id])
   end
 
   def new

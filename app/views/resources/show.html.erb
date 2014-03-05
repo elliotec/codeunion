@@ -15,6 +15,8 @@
         <p><%= @resource.body %></p>
 <h2>Language: <%= @resource.language_id %></h2>
 <h2>Category: <%= @resource.category_id %></h2>
+<h2>Category: <%= @resource.language.name %></h2>
+<h2>Category: <%= @resource.category.name %></h2>
 
         <%= link_to 'Edit', edit_resource_path(@resource) %> |
 <%= link_to 'Back', resources_path %>

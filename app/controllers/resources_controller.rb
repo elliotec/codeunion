@@ -19,7 +19,7 @@ class ResourcesController < ApplicationController
 
   def create
     @resource = Resource.new(resource_params)
-
+    raise 'your hands'
     respond_to do |format|
       if @resource.save
         format.html { redirect_to @resource, notice: 'Resource was successfully created.' }
@@ -57,7 +57,7 @@ class ResourcesController < ApplicationController
     end
 
     def resource_params
-      params.require(:resource).permit(:name, :body, :language_id, :category_id)
+      params.require(:resource).permit(:name, :body, :language_id, :category_id, :language, :category)
     end
 
     def load_resource
