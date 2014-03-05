@@ -1,6 +1,6 @@
 class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   # GET /resources
   # GET /resources.json
   def index
