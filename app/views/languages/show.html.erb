@@ -4,6 +4,10 @@
   <strong>Name:</strong>
   <%= @language.name %>
 </p>
-
-<%= link_to 'Edit', edit_language_path(@language) %> |
-<%= link_to 'Back', languages_path %>
+<% if can? :update, @language %>
+  <%= link_to 'Edit', edit_language_path(@language) %> |
+<% end %>
+<%= link_to 'Back', languages_path %> |
+<% if can? :destroy, @language %>
+  <%= link_to 'Delete', languages_path(@language),  method: :delete, data: { confirm: 'Are you sure?'} %>
+<% end %>

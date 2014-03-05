@@ -12,3 +12,11 @@ Language.create(name: "Javascript")
 Language.create(name: "PHP")
 Language.create(name: "Objective-C")
 Language.create(name: "Java")
+
+@kayla = User.create(email: "kaylas.email.address@gmail.com",
+                     password: "password",
+                     moderator: true)
+
+@user = User.create(email: "user@user.com",
+                    password: "password",
+                    moderator: false)
