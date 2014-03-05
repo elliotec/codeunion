@@ -17,6 +17,18 @@ Language.create(name: "Java")
                      password: "password",
                      moderator: true)
 
+@mike = User.create(email: "elliotecweb@gmail.com",
+                    password: "happiness",
+                    moderator: true)
+
+@john = User.create(email: "john@codeunion.com",
+                    password: "yaml",
+                    moderator: true)
+
+@joel = User.create(email: "joel@joel.com",
+                    password: "password",
+                    moderator: true)
+
 @user = User.create(email: "user@user.com",
                     password: "password",
                     moderator: false)
