@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id="services" class="section">
   <div class="fixed-wrapper"><h1>Categories</h1></div>
   <div class="container">
@@ -22,3 +23,38 @@
   </div>
 </div>
 <%= link_to 'New Category', new_category_path, class: "btn btn-small" %>
+=======
+<h1>Listing categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+          <td><%= link_to 'Show', category %></td>
+        <% if can? :update, @category %>
+          <td><%= link_to 'Edit', edit_category_path(category) %></td>
+        <% end %>
+        <% if can? :destroy, @category %>
+          <td><%= link_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if can? :create, @category %>
+  <%= link_to 'New Category', new_category_path %>
+<% end %>
+>>>>>>> b2aab5c6bf7894ba5b0a0c60b171e1a711119bd7
