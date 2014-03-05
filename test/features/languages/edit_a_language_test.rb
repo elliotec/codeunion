@@ -1,9 +1,11 @@
 require "test_helper"
 
 feature "editing a language" do
-  scenario "moderator can edit a langauge" do
+  # scenario "moderator can edit a langauge" do
+  #   sign_in_moderator
+  #   visit
 
-  end
+  # end
 
   scenario "user can't see edit language button" do
 

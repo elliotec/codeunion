@@ -6,7 +6,7 @@ feature "Creating a Resource" do
     visit new_resource_path
     fill_in "Name", with: resources(:codefellows).name
     fill_in "Body", with: resources(:codefellows).body
-    click_on "New Resource"
+    click_on "Create Resource"
     page.text.must_include "Resource was successfully created"
     page.text.must_include resources(:codefellows).name
     page.text.must_include resources(:codefellows).body
@@ -17,7 +17,7 @@ feature "Creating a Resource" do
     visit new_resource_path
     fill_in "Name", with: resources(:codefellows).name
     fill_in "Body", with: resources(:codefellows).body
-    click_on "New Resource"
+    click_on "Create Resource"
     page.text.must_include "Resource was successfully created"
     page.text.must_include resources(:codefellows).name
     page.text.must_include resources(:codefellows).body
