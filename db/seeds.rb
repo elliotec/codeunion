@@ -20,6 +20,7 @@ Category.create(name: "Game")
 Category.create(name: "Video")
 Category.create(name: "University")
 
+
 @kayla = User.create(email: "kaylas.email.address@gmail.com",
                      password: "password",
                      moderator: true)
@@ -39,3 +40,17 @@ Category.create(name: "University")
 @user = User.create(email: "user@user.com",
                     password: "password",
                     moderator: false)
+
+
+require 'ffaker'
+
+
+100.times do
+  Resource.new.tap do |p|
+    p.name = Faker::HipsterIpsum.sentence(1)
+    p.body = Faker::HipsterIpsum.paragraph
+    p.language_id = rand(1...6)
+    p.category_id = rand(1...6)
+    p.save!
+  end
+end

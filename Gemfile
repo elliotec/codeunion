@@ -17,6 +17,7 @@ gem 'acts_as_votable', '~> 0.8.0'
 group :development, :test do
   gem 'better_errors', '1.1.0'
   gem 'binding_of_caller', '0.7.2'
+  gem 'ffaker', '1.22.1'
   gem 'launchy', '2.4.2'
   gem 'minitest-rails-capybara', '0.10.0'
   gem 'simplecov', '0.8.2'
