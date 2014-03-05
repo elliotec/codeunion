@@ -15,7 +15,13 @@
 
   <%= f.label :body %>
   <%= f.text_field :body %>
-  
+
+  <%= f.label :category %>
+  <%= f.collection_select :category_id, Category.all, :id, :name %>
+
+  <%= f.label :language %>
+  <%= f.collection_select :language_id, Language.all, :id, :name %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
