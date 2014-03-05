@@ -13,6 +13,13 @@ Language.create(name: "PHP")
 Language.create(name: "Objective-C")
 Language.create(name: "Java")
 
+Category.create(name: "Book")
+Category.create(name: "Bootcamp")
+Category.create(name: "Blog")
+Category.create(name: "Game")
+Category.create(name: "Video")
+Category.create(name: "University")
+
 @kayla = User.create(email: "kaylas.email.address@gmail.com",
                      password: "password",
                      moderator: true)
@@ -21,8 +28,8 @@ Language.create(name: "Java")
                     password: "happiness",
                     moderator: true)
 
-@john = User.create(email: "john@codeunion.com",
-                    password: "yaml",
+@john = User.create(email: "johncjensen@hotmail.com",
+                    password: "password",
                     moderator: true)
 
 @joel = User.create(email: "joel@joel.com",
