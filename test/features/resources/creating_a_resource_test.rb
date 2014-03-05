@@ -10,4 +10,3 @@ feature "Creating a Resource" do
     page.text.must_include resources(:codefellows).name
     page.text.must_include resources(:codefellows).body
   end
-end
