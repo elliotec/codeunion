@@ -5,7 +5,7 @@ feature "editing a resource" do
     sign_in_moderator
     visit resource_path(resources(:codefellows))
 
-    first(:link, 'Edit').click
+    click_on "Edit"
     fill_in "Body", with: "Becoming a Web Developer"
     click_on "Update Resource"
 
