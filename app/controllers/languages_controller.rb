@@ -1,5 +1,6 @@
 class LanguagesController < ApplicationController
   before_action :set_language, only: [:show, :edit, :update, :destroy]
+  before_action :load_language, only: :create
   load_and_authorize_resource
   # GET /languages
   # GET /languages.json
@@ -24,7 +25,6 @@ class LanguagesController < ApplicationController
   # POST /languages
   # POST /languages.json
   def create
-    @language = Language.new(language_params)
 
     respond_to do |format|
       if @language.save
@@ -70,5 +70,9 @@ class LanguagesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def language_params
       params.require(:language).permit(:name)
+    end
+
+    def load_language
+      @language = Language.new(language_params)
     end
 end
