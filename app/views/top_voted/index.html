@@ -1,4 +1,4 @@
-<h1>Top <%= @language.name %> <%= @category.name %></h1>
+<h1>Top <%= @language.name %> <% if @category %><%= @category.name %><% else %> Resources<% end %></h1>
 <ul>
   <% @resources.each do |resource| %>
   <li><h3><%= link_to resource.name, resource %></h3></li>
