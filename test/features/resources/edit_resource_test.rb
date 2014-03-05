@@ -1,7 +1,8 @@
 require "test_helper"
 
 feature "editing a resource" do
-  scenario "submit updates to existing resource" do
+  scenario "moderator can submit updates to existing resource" do
+    sign_in_moderator
     visit resource_path(resources(:codefellows))
 
     first(:link, 'Edit').click

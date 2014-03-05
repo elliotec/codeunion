@@ -30,7 +30,6 @@ feature "creating a language" do
     sign_in_user
     visit new_language_path
     page.text.must_include "AccessDenied"
-    page.text.wont_include "Create Language"
   end
 
   scenario "unlogged in person can't see create language button" do
@@ -41,7 +40,6 @@ feature "creating a language" do
   scenario "unlogged in person can't visit new language path" do
     visit new_language_path
     page.text.must_include "AccessDenied"
-    page.text.wont_include "Create Language"
   end
 
 

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'bootstrap-sass', '3.1.0.2'
-gem 'cancan', '1.6.10'
+gem 'cancancan', '~>1.7'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise', '3.2.3'
 gem 'jbuilder', '~> 1.2'
