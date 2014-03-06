@@ -4,7 +4,7 @@
     <div class="content">
       <div class="row">
         <% @languages.each do |language| %>
-          <%= link_to "/#{language.name}" do %>
+          <%= link_to '/' + language.name do %>
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="service block">
               <div class="icon-wrapper blue">
