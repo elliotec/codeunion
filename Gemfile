@@ -15,8 +15,8 @@ gem 'acts_as_votable'
 gem 'rails_12factor', '0.0.2'
 
 group :production do
+  gem 'rails_12factor', '0.0.2'
   gem 'pg','0.17.1'
-  gem 'thin'
 end
 
 group :development, :test do
