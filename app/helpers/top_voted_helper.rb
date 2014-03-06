@@ -5,7 +5,7 @@ module TopVotedHelper
       string += @language.name.capitalize
     end
     if @category
-      string += ' ' + @category.name.capitalize
+      string += ' ' + @category.name.capitalize.pluralize
     else
       string += ' Resources'
     end
