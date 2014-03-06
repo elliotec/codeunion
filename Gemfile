@@ -13,6 +13,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'minitest-rails', '0.9.2'
 gem 'acts_as_votable'
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   gem 'better_errors', '1.1.0'
@@ -26,7 +30,3 @@ group :development, :test do
   gem 'quiet_assets', '1.0.2'
 end
 
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
