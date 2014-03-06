@@ -6,9 +6,14 @@ class ResourcesController < ApplicationController
   def upvote
     @resource = Resource.find(params[:id])
     @user = current_user
-    @resource.liked_by @user
     respond_to do |format|
-      format.js
+      if @user.voted_for? @resource
+        @resource.unliked_by @user
+        format.js { render :action => 'removevote' }
+      else
+        @resource.liked_by @user
+        format.js
+      end
     end
   end
 

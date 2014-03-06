@@ -1,5 +1,6 @@
 class TopVotedController < ApplicationController
   def index
+    @user = current_user
     @language = Language.where(name: params[:language].downcase).first
     @category = Category.where(name: params[:category].downcase).first
     if @language == nil || @category == nil
@@ -10,6 +11,7 @@ class TopVotedController < ApplicationController
   end
 
   def language
+    @user = current_user
     @language = Language.where(name: params[:language].downcase).first
     if @language.present?
       @resources = Resource.where(language_id: @language.id)
@@ -20,6 +22,7 @@ class TopVotedController < ApplicationController
   end
 
   def category
+    @user = current_user
     @category = Category.where(name: params[:category].downcase).first
     if @category.present?
       @resources = Resource.where(category_id: @category.id)
