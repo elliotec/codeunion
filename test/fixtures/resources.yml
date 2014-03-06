@@ -2,10 +2,10 @@ codefellows:
   name: codefellows
   body: brook is the teacher
   category: bootcamp
-  language: ruby
+  language: fortran
 
 poodr:
   name: poodr
   body: its a book
   category: book
-  language: ruby
+  language: fortran

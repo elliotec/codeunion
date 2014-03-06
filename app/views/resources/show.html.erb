@@ -18,9 +18,13 @@
 <h2>Category: <%= @resource.language.name %></h2>
 <h2>Category: <%= @resource.category.name %></h2>
 
-        <%= link_to 'Edit', edit_resource_path(@resource) %> |
+<% if can? :update, @resource %>
+  <%= link_to 'Edit', edit_resource_path(@resource) %> |
+<% end %>
 <%= link_to 'Back', resources_path %>
-<%= link_to 'Destroy', @resource, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% if can? :destroy, @resource %>
+  <%= link_to 'Destroy', @resource, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
 
         <!-- resource loop end -->
       </div>
