@@ -1,0 +1,18 @@
+<%= content_for(:pagetitle, "Catgories") %>
+<% @categories.each do |category| %>
+<%= link_to '/' + category.name do %>
+<div class="col-md-4 col-sm-6 col-xs-12">
+  <div class="service block">
+    <div class="icon-wrapper blue">
+      <span class="valign"></span>
+    </div>
+    <h3><%= category.name %></h3>
+    <p><%= link_to 'Edit', edit_category_path(category) %> </p>
+  </div>
+  <br>
+</div>
+<% end %>
+<% end %>
+<% if can? :create, @category %>
+<%= link_to 'New Category', new_category_path, class: "btn btn-small" %>
+<% end %>

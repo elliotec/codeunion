@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CodeUnion</title>
+  <title><%= yield(:title).empty? ? 'CodeUnion' : yield(:title) %></title>
+  <meta name="description" content="<%= yield(:description) %>">
+  <meta property="og:title" content="<%= yield(:title) %>" />
+  <meta property="og:description" content="<%= yield(:description) %>" />
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -12,6 +15,17 @@
 <% flash.each do |name, msg| %>
      <%= content_tag(:div, msg, class: "alert alert-info") %>
 <% end %>
-<%= yield %>
+
+<div class="section">
+  <div class="fixed-wrapper"><h1><%= yield(:pagetitle) %></h1></div>
+  <div class="container">
+    <div class="content">
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

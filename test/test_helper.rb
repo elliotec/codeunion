@@ -7,10 +7,18 @@ class ActiveSupport::TestCase
   fixtures :all
 end
 
-  def sign_in
+  def sign_in_moderator
     visit "/"
     click_on "Sign in"
-    fill_in "Email", with: users(:one).email
+    fill_in "Email", with: users(:moderator).email
+    fill_in "Password", with: "password"
+    click_button "Sign in"
+  end
+
+  def sign_in_user
+    visit "/"
+    click_on "Sign in"
+    fill_in "Email", with: users(:user).email
     fill_in "Password", with: "password"
     click_button "Sign in"
   end

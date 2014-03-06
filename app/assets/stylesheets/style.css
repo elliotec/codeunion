@@ -3,7 +3,7 @@ html, body {
   background-color: #eee;
 }
 html {
-  background-color: #1C2B36;
+  background-color: #1D2129;
 }
 body {
   color: #3e4258;
@@ -264,6 +264,7 @@ span.valign {
 .container {
   max-width: 1050px;
   padding: 30px;
+  padding-right: 45px;
   /*margin: 100px 0;*/
 }
 .row.last {
@@ -282,15 +283,25 @@ span.valign {
 .purple {
   background-color: #6d7cd4;
 }
+
+.culighterdark {
+  background-color: #34495e;
+}
 .icon-wrapper {
   display: block;
   width: 100%;
   height: 100px;
   text-align: center;
-  -webkit-border-radius: 4px 4px 0 0;
+/*  -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;*/
 }
+
+.icon-wrapper h2 {
+  padding-top: 30px;
+  color: #F2F5FD !important;
+}
+
 .icon-wrapper span.circle {
   position: relative;
   top: 6px;
@@ -515,11 +526,10 @@ body {
   margin: 0;
   -webkit-transition: .3s;
   transition: .3s;
-  background-color: #3BC0C3;
+  background-color: #1D2129;
 }
 .navbar a.navbar-brand:hover {
-  background-color: #3892EA;
-  color:#333;
+  background-color: #262A33;
 }
 .navbar a.navbar-brand i {
   text-align: center;
@@ -583,7 +593,7 @@ body {
 .navbar .navbar-nav {
   margin: 0;
   width: 100%;
-  background-color: #1C2B36;
+  background-color: #1D2129;
 }
 .navbar .navbar-nav li {
   height: 60px;
@@ -599,6 +609,7 @@ body {
   color: #999;
   -webkit-transition: .3s;
   transition: .3s;
+  text-align: center;
 }
 .navbar .navbar-nav li a:hover {
   color: #eee;
@@ -658,7 +669,7 @@ body {
   overflow: auto;
 }
 #navbar .navbar-header {
-  background-color: #3BC0C3;
+  background-color: #1D2129;
   height: 50px;
 }
 #navbar .navbar-toggle {
@@ -739,7 +750,7 @@ body {
   color: #3e4258;
 }
 .section:last-child {
-  background-color: #fff;
+  background-color: #F2F5FD;
 }
 .section .content.affix {
   width: 90%;
