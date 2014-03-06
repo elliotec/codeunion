@@ -4,13 +4,15 @@
   <% @resources.each do |resource| %>
   <div class="post">
     <div class="list-group-item">
-    <%= link_to upvote_url(id: resource.id), :remote => :true do %>
-        <% if @user.voted_for? resource %>
-          <span class="glyphicon glyphicon-arrow-up red" id="arrow_resource_<%= resource.id %>"></span>
-        <% else %>
-          <span class="glyphicon glyphicon-arrow-up" id="arrow_resource_<%= resource.id %>"></span>
+      <% if current_user.present? %>
+        <%= link_to upvote_url(id: resource.id), :remote => :true do %>
+          <% if @user.voted_for? resource %>
+            <span class="glyphicon glyphicon-arrow-up red" id="arrow_resource_<%= resource.id %>"></span>
+          <% else %>
+            <span class="glyphicon glyphicon-arrow-up" id="arrow_resource_<%= resource.id %>"></span>
+          <% end %>
         <% end %>
-    <% end %>
+      <% end %>
     <span id="votes_resource_<%= resource.id %>"><%= resource.votes.size %></span>
     <%= link_to resource_path(resource) do %>
 
