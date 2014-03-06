@@ -1,24 +1,13 @@
-<div id="services" class="section">
-  <div class="fixed-wrapper">
-    <h1><%= generate_title %></h1>
+<%= content_for(:pagetitle, generate_title) %>
+
+<div class="list-group">
+  <% @resources.each do |resource| %>
+  <div class="post">
+    <%= link_to resource_path(resource), :class => "list-group-item" do %>
+    <span class="glyphicon glyphicon-arrow-up"><%#= resource.liked_by current_user %></span>
+    <span class="badge admin-category-badge"><%= resource.category.name %></span>
+    <h3 class="list-group-item-heading"><%= resource.name %></h3>
+    <% end %>
   </div>
-  <div class="container">
-    <div class="content">
-      <div class="row">
-        <!-- resource loop begin -->
-        <div class="list-group">
-          <% @resources.each do |resource| %>
-          <div class="post">
-            <%= link_to resource_path(resource), :class => "list-group-item" do %>
-            <span class="glyphicon glyphicon-arrow-up"><%#= resource.liked_by current_user %></span>
-            <span class="badge admin-category-badge"><%= resource.category.name %></span>
-            <h3 class="list-group-item-heading"><%= resource.name %></h3>
-            <% end %>
-          </div>
-          <% end %>
-        </div>
-        <!-- resource loop end -->
-      </div>
-      </div><!-- /.content -->
-    </div>
-  </div>
+  <% end %>
+</div>
