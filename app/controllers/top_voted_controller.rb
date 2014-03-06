@@ -10,25 +10,25 @@ class TopVotedController < ApplicationController
     end
   end
 
-  def language
-    @user = current_user
-    @language = Language.where(name: params[:language].downcase).first
-    if @language.present?
-      @resources = Resource.where(language_id: @language.id)
-      render :index
+  def route
+    if Language.where(name: params[:name]).present?
+      language
+    elsif Category.where(name: params[:name]).present?
+      category
     else
-      redirect_to root_path
+      raise ActiveRecord::RecordNotFound
     end
   end
 
+  def language
+    @language = Language.where(name: params[:name].downcase).first
+    @resources = Resource.where(language_id: @language.id)
+    render :index
+  end
+
   def category
-    @user = current_user
-    @category = Category.where(name: params[:category].downcase).first
-    if @category.present?
-      @resources = Resource.where(category_id: @category.id)
-      render :index
-    else
-      redirect_to root_path
-    end
+    @category = Category.where(name: params[:name].downcase).first
+    @resources = Resource.where(category_id: @category.id)
+    render :index
   end
 end
