@@ -4,7 +4,6 @@ class ResourcesController < ApplicationController
   load_and_authorize_resource except: :upvote
 
   def upvote
-    # authorize! :upvote, :resource
     @resource = Resource.find(params[:id])
     @user = current_user
     respond_to do |format|
