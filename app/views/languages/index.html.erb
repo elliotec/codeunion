@@ -1,25 +1,18 @@
-<div id="services" class="section">
-  <div class="fixed-wrapper"><h1>Languages</h1></div>
-  <div class="container">
-    <div class="content">
-      <div class="row">
-        <% @languages.each do |language| %>
-          <%= link_to '/' + language.name do %>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="service block">
-              <div class="icon-wrapper blue">
-                <span class="valign"></span>
-              </div>
-              <h3><%= language.name %></h3>
-              <p><%= link_to 'Edit', edit_language_path(language) %> </p>
-            </div>
-            <br>
-          </div>
-          <% end %>
-        <% end %>
-      </div>
+<%= content_for(:pagetitle, "Languages") %>
+<% @languages.each do |language| %>
+<%= link_to '/' + language.name do %>
+<div class="col-md-4 col-sm-6 col-xs-12">
+  <div class="service block">
+    <div class="icon-wrapper blue">
+      <span class="valign"></span>
     </div>
+    <h3><%= language.name %></h3>
+    <p><%= link_to 'Edit', edit_language_path(language) %> </p>
   </div>
+  <br>
+</div>
+<% end %>
+<% end %>
 </div>
 <% if can? :create, @language %>
 <%= link_to 'New Language', new_language_path, class: "btn btn-large" %>
