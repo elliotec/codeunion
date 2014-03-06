@@ -10,19 +10,27 @@
       </ul>
     </div>
   <% end %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <div class="field">
+    <%= f.label :name, class:"hiddenlabel" %>
+    <%= f.text_field :name, placeholder: "name", class: "form-control" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :body, class:"hiddenlabel" %>
+    <%= f.text_area :body, placeholder: "body", class: "form-control" %>
+  </div>
 
-  <%= f.label :body %>
-  <%= f.text_field :body %>
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </div>
 
-  <%= f.label :category %>
-  <%= f.collection_select :category_id, Category.all, :id, :name %>
-
-  <%= f.label :language %>
-  <%= f.collection_select :language_id, Language.all, :id, :name %>
+  <div class="field">
+    <%= f.label :language %>
+    <%= f.collection_select :language_id, Language.all, :id, :name %>
+  </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn" %>
   </div>
 <% end %>
