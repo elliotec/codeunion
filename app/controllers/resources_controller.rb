@@ -1,11 +1,20 @@
 class ResourcesController < ApplicationController
   before_action :load_resource, only: :create
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource
+  load_and_authorize_resource except: :upvote
 
   def upvote
-    @resource.liked_by current_user
-    redirect_to @resource
+    @resource = Resource.find(params[:id])
+    @user = current_user
+    respond_to do |format|
+      if @user.voted_for? @resource
+        @resource.unliked_by @user
+        format.js { render :action => 'removevote' }
+      else
+        @resource.liked_by @user
+        format.js
+      end
+    end
   end
 
   def index
