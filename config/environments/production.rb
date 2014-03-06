@@ -3,10 +3,11 @@ Codeunion::Application.configure do
   config.eager_load = true
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-  config.action_mailer.default_url_options = { :host => 'http://codeunion.herokuapp.com/' }
-  config.serve_static_assets = false
+  config.action_mailer.default_url_options = { :host => 'http://codeunionfellows.herokuapp.com/' }
+  config.serve_static_assets = true
   config.assets.js_compressor = :uglifier
-  config.assets.compile = false
+  config.assets.css_compressor = :sass
+  config.assets.compile = true
   config.assets.digest = true
   config.assets.version = '1.0'
   config.log_level = :info

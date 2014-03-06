@@ -1,21 +1,19 @@
 Codeunion::Application.routes.draw do
-  resources :languages
+
+  resources :languages do
+    :categories
+  end
 
   resources :categories
 
-  resources :resources do
-    # post "upvote", to: "resources#upvote", as: :upvote
-  end
+  resources :resources
 
   devise_for :users
   root "welcome#index"
 
-  get '/:language/:category', to: "top_voted#index"
+  get "/upvote", to: "resources#upvote"
 
-  Language.all.each do |language|
-    get "#{language.name}", to: "top_voted#language", :language => language.name
-  end
-  Category.all.each do |category|
-    get "#{category.name}", to: "top_voted#category", :category => category.name
-  end
+  get "/:language/:category", to: "top_voted#index"
+
+  get "/:name", to: "top_voted#route"
 end

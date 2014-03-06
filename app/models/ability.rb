@@ -3,7 +3,6 @@ class Ability
 
   def initialize(user)
     if user.present?
-    # user ||= User.new #unlogged in user
       if user.moderator?
         can :manage, :all
       else
@@ -12,6 +11,7 @@ class Ability
       end
     else
       can :read, :all
+      can :upvote, :all
     end
   end
 end
