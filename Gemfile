@@ -11,7 +11,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks', '2.2.1'
 gem 'uglifier', '>= 1.3.0'
 gem 'minitest-rails', '0.9.2'
-gem 'acts_as_votable'
+
 
 group :production do
   gem 'pg','0.17.1'
@@ -19,6 +19,7 @@ group :production do
 end
 
 group :development, :test do
+  gem 'acts_as_votable'
   gem 'better_errors', '1.1.0'
   gem 'binding_of_caller', '0.7.2'
   gem 'ffaker', '1.22.1'
