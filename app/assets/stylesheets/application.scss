@@ -10,17 +10,8 @@
  *
  *= require_self
  *= require style
+ *= require codeunion
  */
 
 @import "bootstrap";
 
-#logo {
-  width: 100%;
-  height: auto;
-  padding: 10px 5px;
-}
-
-
-.hiddenlabel {
-  display: none;
-}
