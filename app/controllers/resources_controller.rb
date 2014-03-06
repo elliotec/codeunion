@@ -1,7 +1,7 @@
 class ResourcesController < ApplicationController
   before_action :load_resource, only: :create
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource
+  load_and_authorize_resource except: :upvote
 
   def upvote
     @resource = Resource.find(params[:id])

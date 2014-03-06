@@ -20,7 +20,6 @@ feature "editing a resource" do
   scenario "user can't visit edit resource path" do
     sign_in_user
     visit edit_resource_path(resources(:codefellows))
-    page.text.wont_include "Language"
     page.text.must_include "AccessDenied"
   end
 
