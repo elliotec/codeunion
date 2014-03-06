@@ -3,6 +3,11 @@ class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
+  def upvote
+    @resource.liked_by current_user
+    redirect_to @resource
+  end
+
   def index
     @resources = Resource.all
   end
@@ -56,7 +61,7 @@ class ResourcesController < ApplicationController
     end
 
     def resource_params
-      params.require(:resource).permit(:name, :body, :language_id, :category_id, :language, :category)
+      params.require(:resource).permit(:name, :body, :language_id, :category_id)
     end
 
     def load_resource

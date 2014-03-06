@@ -3,7 +3,9 @@ Codeunion::Application.routes.draw do
 
   resources :categories
 
-  resources :resources
+  resources :resources do
+    # post "upvote", to: "resources#upvote", as: :upvote
+  end
 
   devise_for :users
   root "welcome#index"
