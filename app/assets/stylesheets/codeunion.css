@@ -1,0 +1,18 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif', serif;
+}
+
+#logo {
+  width: 100%;
+  height: auto;
+  padding: 10px 5px;
+}
+
+
+.hiddenlabel {
+  display: none;
+}
+
+.badge {
+  border-radius:0;
+}
