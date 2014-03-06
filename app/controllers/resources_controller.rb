@@ -4,8 +4,12 @@ class ResourcesController < ApplicationController
   load_and_authorize_resource
 
   def upvote
-    @resource.liked_by current_user
-    redirect_to @resource
+    @resource = Resource.find(params[:id])
+    @user = current_user
+    @resource.liked_by @user
+    respond_to do |format|
+      format.js
+    end
   end
 
   def index

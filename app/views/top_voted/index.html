@@ -3,11 +3,16 @@
 <div class="list-group">
   <% @resources.each do |resource| %>
   <div class="post">
-    <%= link_to resource_path(resource), :class => "list-group-item" do %>
-    <span class="glyphicon glyphicon-arrow-up"><%#= resource.liked_by current_user %></span>
-    <span class="badge admin-category-badge"><%= resource.category.name %></span>
-    <h3 class="list-group-item-heading"><%= resource.name %></h3>
+    <div class="list-group-item">
+    <%= link_to upvote_url(id: resource.id), :remote => :true do %>
+        <span class="glyphicon glyphicon-arrow-up" id="resource_<%= resource.id %>"></span>
     <% end %>
+    <%= link_to resource_path(resource) do %>
+
+    <h3 class="list-group-item-heading"><%= resource.name %></h3>
+    <span class="badge admin-category-badge"><%= resource.category.name %></span>
+    <% end %>
+  </div>
   </div>
   <% end %>
 </div>
