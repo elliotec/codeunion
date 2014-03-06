@@ -3,6 +3,12 @@ class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
+  def upvote
+    @resource = Resource.find(params[:id])
+    @resource.liked_by current_user
+    redirect_to @picture
+  end
+
   def index
     @resources = Resource.all
   end
