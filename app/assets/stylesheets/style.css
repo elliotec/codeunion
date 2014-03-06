@@ -599,6 +599,7 @@ body {
   color: #999;
   -webkit-transition: .3s;
   transition: .3s;
+  text-align: center;
 }
 .navbar .navbar-nav li a:hover {
   color: #eee;
