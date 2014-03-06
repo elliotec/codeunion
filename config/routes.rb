@@ -9,5 +9,11 @@ Codeunion::Application.routes.draw do
   root "welcome#index"
 
   get '/:language/:category', to: "top_voted#index"
-  get '/:language', to: "top_voted#language"
+
+  Language.all.each do |language|
+    get "#{language.name}", to: "top_voted#language", :language => language.name
+  end
+  Category.all.each do |category|
+    get "#{category.name}", to: "top_voted#category", :category => category.name
+  end
 end

@@ -4,7 +4,7 @@
     <div class="content">
       <div class="row">
         <% @categories.each do |category| %>
-          <%= link_to category do %>
+          <%= link_to '/' + category.name do %>
             <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="service block">
                 <div class="icon-wrapper blue">
