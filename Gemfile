@@ -12,7 +12,12 @@ gem 'turbolinks', '2.2.1'
 gem 'uglifier', '>= 1.3.0'
 gem 'minitest-rails', '0.9.2'
 gem 'acts_as_votable'
+gem 'rails_12factor', '0.0.2'
 
+group :production do
+  gem 'pg','0.17.1'
+  gem 'thin'
+end
 
 group :development, :test do
   gem 'better_errors', '1.1.0'
@@ -21,12 +26,8 @@ group :development, :test do
   gem 'launchy', '2.4.2'
   gem 'minitest-rails-capybara', '0.10.0'
   gem 'simplecov', '0.8.2'
-  gem 'sqlite3', '1.3.9'
+  gem 'sqlite3', '1.3.8'
   gem 'turn', '0.9.6'
   gem 'quiet_assets', '1.0.2'
 end
 
-group :production do
-  gem 'pg', '0.17.1'
-  gem 'rails_12factor', '0.0.2'
-end
