@@ -4,7 +4,7 @@ Codeunion::Application.routes.draw do
   resources :categories
 
   resources :resources do
-    put "upvote", to: "resources#upvote", as: :upvote
+    # post "upvote", to: "resources#upvote", as: :upvote
   end
 
   devise_for :users

@@ -4,9 +4,8 @@ class ResourcesController < ApplicationController
   load_and_authorize_resource
 
   def upvote
-    @resource = Resource.find(params[:id])
     @resource.liked_by current_user
-    redirect_to @picture
+    redirect_to @resource
   end
 
   def index
@@ -62,7 +61,7 @@ class ResourcesController < ApplicationController
     end
 
     def resource_params
-      params.require(:resource).permit(:name, :body, :language_id, :category_id, :language, :category)
+      params.require(:resource).permit(:name, :body, :language_id, :category_id)
     end
 
     def load_resource
