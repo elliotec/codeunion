@@ -12,6 +12,7 @@ class Ability
       end
     else
       can :read, :all
+      can :upvote, :all
     end
   end
 end
