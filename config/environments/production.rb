@@ -7,7 +7,7 @@ Codeunion::Application.configure do
   config.serve_static_assets = false
   config.assets.js_compressor = :uglifier
   config.assets.css_compressor = :sass
-  config.assets.compile = false
+  config.assets.compile = true
   config.assets.digest = true
   config.assets.version = '1.0'
   config.log_level = :info
