@@ -12,7 +12,9 @@ gem 'turbolinks', '2.2.1'
 gem 'uglifier', '>= 1.3.0'
 gem 'minitest-rails', '0.9.2'
 gem 'acts_as_votable'
-gem 'rails_12factor', '0.0.2'
+gem 'ckeditor'
+gem 'acts-as-taggable-on'
+gem 'ffaker', '1.22.1'
 
 group :production do
   gem 'rails_12factor', '0.0.2'
@@ -22,7 +24,6 @@ end
 group :development, :test do
   gem 'better_errors', '1.1.0'
   gem 'binding_of_caller', '0.7.2'
-  gem 'ffaker', '1.22.1'
   gem 'launchy', '2.4.2'
   gem 'minitest-rails-capybara', '0.10.0'
   gem 'simplecov', '0.8.2'

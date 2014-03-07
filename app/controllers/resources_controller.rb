@@ -70,7 +70,7 @@ class ResourcesController < ApplicationController
     end
 
     def resource_params
-      params.require(:resource).permit(:name, :body, :language_id, :category_id)
+      params.require(:resource).permit(:name, :body, :language_id, :category_id, :tag_list)
     end
 
     def load_resource
