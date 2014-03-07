@@ -1,7 +1,5 @@
 class CreateResources < ActiveRecord::Migration
   def change
-    drop_table :languages
-    drop_table :ways
     
     create_table :resources do |t|
       t.string :name
