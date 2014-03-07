@@ -1,6 +1,5 @@
 class TopVotedController < ApplicationController
   def index
-    @user = current_user
     @language = Language.where(name: params[:language].downcase).first
     @category = Category.where(name: params[:category].downcase).first
     if @language == nil || @category == nil
