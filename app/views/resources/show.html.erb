@@ -1,9 +1,5 @@
 <%= content_for(:pagetitle, "#{@resource.name}") %>
-<p><%= @resource.body %></p>
-<h2>Language: <%= @resource.language_id %></h2>
-<h2>Category: <%= @resource.category_id %></h2>
-<h2>Category: <%= @resource.language.name %></h2>
-<h2>Category: <%= @resource.category.name %></h2>
+<p><%= @resource.body.html_safe %></p>
 <% if can? :update, @resource %>
 <%= link_to 'Edit', edit_resource_path(@resource) %> |
 <% end %>
