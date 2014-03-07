@@ -1,12 +1,12 @@
 Codeunion::Application.routes.draw do
 
-  resources :languages do
-    :categories
-  end
+  resources :languages
 
   resources :categories
 
   resources :resources
+
+  get 'tags/:tag', to: 'top_voted#index', as: :tag
 
   devise_for :users
   root "welcome#index"
