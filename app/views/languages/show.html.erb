@@ -1,4 +1,5 @@
 <%= content_for(:pagetitle, "#{@language.name}") %>
+<%= link_to "Top #{language.name} #{@category.name}", %>
 <div class="list-group">
   <% @resources.each do |resource| %>
   <div class="post">
@@ -9,7 +10,6 @@
   </div>
   <% end %>
 </div>
-<!-- resource loop end -->
 <% if can? :update, @language %>
 <%= link_to 'Edit', edit_language_path(@language) %> |
 <% end %>

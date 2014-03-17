@@ -6,8 +6,6 @@ Codeunion::Application.routes.draw do
 
   resources :resources
 
-  get 'tags/:tag', to: 'top_voted#index', as: :tag
-
   devise_for :users
   root "welcome#index"
 
