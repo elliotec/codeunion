@@ -13,8 +13,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'minitest-rails', '0.9.2'
 gem 'acts_as_votable'
 gem 'ckeditor'
-gem 'acts-as-taggable-on'
-gem 'ffaker', '1.22.1'
 
 group :production do
   gem 'rails_12factor', '0.0.2'
