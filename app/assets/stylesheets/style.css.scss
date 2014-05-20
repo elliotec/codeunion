@@ -1,10 +1,20 @@
+.welcome {
+  background: url(/assets/coding.jpg) no-repeat;
+
+  .brand-heading {
+  color: white;
+  }
+  
+  .intro-text {
+  color: white;
+  }
+}
+
+
 html, body {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  background-color: #eee;
 }
-html {
-  background-color: #EEEEEE;
-}
+
 body {
   color: #3e4258;
   margin-left: 250px;

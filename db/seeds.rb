@@ -26,7 +26,7 @@ Category.create(name: "University")
                      moderator: true)
 
 @mike = User.create(email: "elliotecweb@gmail.com",
-                    password: "happiness",
+                    password: "password",
                     moderator: true)
 
 @john = User.create(email: "johncjensen@hotmail.com",

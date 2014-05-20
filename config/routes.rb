@@ -7,6 +7,7 @@ Codeunion::Application.routes.draw do
   resources :resources
 
   devise_for :users
+  
   root "welcome#index"
 
   get "/upvote", to: "resources#upvote"

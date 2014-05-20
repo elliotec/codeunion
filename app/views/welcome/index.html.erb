@@ -1,11 +1,20 @@
-<%= content_for(:pagetitle, "Welcome To CodeUnion!") %>
-<img src="https://dl.dropboxusercontent.com/u/257144768/school.jpg" height="auto" width="500px">
-<p>CodeUnion is your one-stop resource for learning to code!
-<br><br>
-Find resources or add your own
-<br><br>
-Select a programming language from the language index linked to the left and check out the most popular resources for that language
-<br><br>
-Only want to learn using a specific type of resource? Select the categories link to search by type of resource.
-
-Want to help others learn? Sign up to submit resources and upvote them
+<body class="welcome">
+  <section class="intro">
+    <div class="intro-body">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 class="brand-heading">Code Union</h1>
+          <p class="intro-text">Code Union is your one-stop resource for learning to code!
+          <br><br>
+          Find resources or add your own
+          <br><br>
+          Select a programming language from the language index linked to the left and check out the most popular resources for that language
+          <br><br>
+          Only want to learn using a specific type of resource? Select the categories link to search by type of resource.
+          Want to help others learn? Sign up to submit resources and upvote them.</p>
+          <%= link_to "Enter", categories_path, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
