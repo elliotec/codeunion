@@ -20,23 +20,18 @@ Category.create(name: "Game")
 Category.create(name: "Video")
 Category.create(name: "University")
 
-
-@kayla = User.create(email: "kaylas.email.address@gmail.com",
-                     password: "password",
-                     moderator: true)
-
-@mike = User.create(email: "elliotecweb@gmail.com",
-                    password: "password",
-                    moderator: true)
-
-@john = User.create(email: "johncjensen@hotmail.com",
-                    password: "password",
-                    moderator: true)
-
-@joel = User.create(email: "joel@joel.com",
-                    password: "password",
-                    moderator: true)
-
 @user = User.create(email: "user@user.com",
                     password: "password",
                     moderator: false)
+
+@katie = User.create(email: "katie@katie.com",
+                    password: "password",
+                    moderator: true)
+
+@garrett = User.create(email: "garrett@garrett.com",
+                    password: "password",
+                    moderator: true)
+
+@tyler = User.create(email: "tyler@tyler.com",
+                    password: "password",
+                    moderator: true)
