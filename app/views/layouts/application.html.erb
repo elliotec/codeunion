@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title><%= yield(:title).empty? ? 'CodeUnion' : yield(:title) %></title>
   <meta name="description" content="<%= yield(:description) %>">
@@ -10,24 +11,26 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-<% unless request.path == root_path %>
-  <%= render 'layouts/navbar' %>
-<% end %>
-<% flash.each do |name, msg| %>
-     <%= content_tag(:div, msg, class: "alert alert-info") %>
-<% end %>
 
-<div class="section">
-  <div class="fixed-wrapper"><h1><%= yield(:pagetitle) %></h1></div>
-  <div class="container">
-    <div class="content">
-      <div class="row">
-        <%= yield %>
+<body>
+  <% unless request.path == root_path %>
+    <%= render 'layouts/navbar' %>
+  <% end %>
+
+  <% flash.each do |name, msg| %>
+       <%= content_tag(:div, msg, class: "alert alert-info") %>
+  <% end %>
+
+  <div class="section">
+    <div class="fixed-wrapper"><h1><%= yield(:pagetitle) %></h1></div>
+    <div class="container">
+      <div class="content">
+        <div class="row">
+          <%= yield %>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
 </body>
+
 </html>
