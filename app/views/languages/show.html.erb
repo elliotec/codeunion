@@ -1,19 +1,22 @@
 <%= content_for(:pagetitle, "#{@language.name}") %>
+
 <%= link_to "Top #{language.name} #{@category.name}", %>
-<div class="list-group">
-  <% @resources.each do |resource| %>
-  <div class="post">
-    <%= link_to resource_path(resource), :class => "list-group-item" do %>
+
+<% @resources.each do |resource| %>
+  <%= link_to resource_path(resource) do %>
     <span class="badge admin-category-badge"><%= resource.category.name %></span>
     <h3 class="list-group-item-heading"><%= resource.name %></h3>
-    <% end %>
-  </div>
   <% end %>
-</div>
-<% if can? :update, @language %>
-<%= link_to 'Edit', edit_language_path(@language) %> |
 <% end %>
-<%= link_to 'Back', languages_path, class: "btn" %>
+
+<h1>test</h1>
+
+<% if can? :update, @language %>
+  <%= link_to 'Edit', edit_language_path(@language) %> |
+<% end %>
+
+<%= link_to 'Back', languages_path %>
+
 <% if can? :destroy, @language %>
-<%= link_to 'Delete', @language,  method: :delete, data: { confirm: 'Are you sure?'} %>
+  <%= link_to 'Delete', @language,  method: :delete, data: { confirm: 'Are you sure?'} %>
 <% end %>
