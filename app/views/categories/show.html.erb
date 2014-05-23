@@ -1,4 +1,5 @@
 <%= content_for(:pagetitle, "#{@category.name}") %>
+
 <div class="list-group">
   <% @resources.each do |resource| %>
   <div class="post">
@@ -10,10 +11,13 @@
   <% end %>
 </div>
 <!-- resource loop end -->
+
 <% if can? :update, @category %>
-<%= link_to 'Edit', edit_category_path(@category) %> |
+  <%= link_to 'Edit', edit_category_path(@category) %> |
 <% end %>
+
 <%= link_to 'Back', categories_path %> |
+
 <% if can? :update, @language %>
-<%= link_to 'Delete', @category,  method: :delete, data: { confirm: 'Are you sure?'} %>
+  <%= link_to 'Delete', @category,  method: :delete, data: { confirm: 'Are you sure?'} %>
 <% end %>
