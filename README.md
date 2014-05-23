@@ -2,7 +2,16 @@
 
 This is a project for Code Fellows that aggregates good learning resources for code.
 
-# Contributors
+START RAILS SERVER?
+  rails s
+
+WHERE TO PUT CSS/SASS?
+codeunion.css.scss
+
+Never work on master. :]
+
+
+<!-- # Contributors
 
 ###Joel Smith
 
@@ -20,3 +29,4 @@ This is a project for Code Fellows that aggregates good learning resources for c
 
 [![Kayla Morrison](https://2.gravatar.com/avatar/def1fca1c77d80a6d4d4b330a4c15c00?d=https%3A%2F%2Fidenticons.github.com%2F924753465c2309400909c4d67ce1727e.png&r=x&s=150)](https://github.com/elliotec)
 
+ -->
