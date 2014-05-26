@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :set_user
-  # before_action :set_resource
+  #before_action :set_resource
 
   def index
     @comments = Comment.all
