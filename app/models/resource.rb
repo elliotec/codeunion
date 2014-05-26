@@ -3,4 +3,8 @@ class Resource < ActiveRecord::Base
   belongs_to :category
   belongs_to :language
   has_many :comments
+
+  searchable do
+    text :name, :body
+  end
 end
