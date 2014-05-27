@@ -7,4 +7,5 @@ class Resource < ActiveRecord::Base
   searchable do
     text :name, :body
   end
+
 end

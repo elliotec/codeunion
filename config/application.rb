@@ -9,7 +9,6 @@ Bundler.require(:default, Rails.env)
 
 module Codeunion
   class Application < Rails::Application
-
     I18n.enforce_available_locales = false
   end
 end

@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+    <% @allLanguages.each do |language| %>
+      <%= link_to '/' + language.name do %>
+        <li><%= language.name %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</nav>
