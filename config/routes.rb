@@ -1,5 +1,7 @@
 Codeunion::Application.routes.draw do
 
+  resources :comments
+
   resources :languages
 
   resources :categories

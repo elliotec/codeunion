@@ -12,11 +12,11 @@
   <% end %>
   <div class="field">
     <%= f.label :name, class:"hiddenlabel" %>
-    <%= f.text_field :name, placeholder: "name", class: "form-control" %>
+    <%= f.text_field :name, placeholder: "name" %>
   </div>
   <br>
 
-    <%= f.cktext_area :body, :toolbar => 'mini' %>
+    <%= f.text_area :body, :toolbar => 'mini' %>
 
   <div class="field">
     <%= f.label :category %>
@@ -29,6 +29,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit class: "btn" %>
+    <%= f.submit %>
   </div>
 <% end %>

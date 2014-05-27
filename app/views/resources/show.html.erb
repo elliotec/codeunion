@@ -1,6 +1,30 @@
 <%= content_for(:pagetitle, "#{@resource.name}") %>
 
+<h1><%= @resource.name %></h1>
 <%= @resource.body.html_safe %>
+
+<br>
+
+<% @resource.comments.each do |comment| %>
+  <%= comment.content %>
+<% end %>
+
+<br>
+
+<%= form_for(@resource.comments.build) do |f| %>
+  <div class="field">
+    <%= f.label Comment %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :resource_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<br>
 
 <% if can? :update, @resource %>
   <%= link_to 'Edit', edit_resource_path(@resource) %> |
