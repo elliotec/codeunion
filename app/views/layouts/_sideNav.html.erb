@@ -1,8 +1,15 @@
 <nav>
   <ul>
+    <li><h2>LANGUAGES</h2></li>
     <% @allLanguages.each do |language| %>
       <%= link_to '/' + language.name do %>
         <li><%= language.name %></li>
+      <% end %>
+    <% end %>
+    <li><h2>CATEGORIES</h2></li>
+    <% @allCategories.each do |category| %>
+      <%= link_to '/' + category.name do %>
+        <li><%= category.name %></li>
       <% end %>
     <% end %>
   </ul>

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 
   before_action :allLanguages
-  #before_action :allCategories
+  before_action :allCategories
 
   private
 
@@ -9,9 +9,9 @@ class ApplicationController < ActionController::Base
       @allLanguages = Language.all
     end
 
-    # def allCategories
-    #   @allCategories = Category.find(params[:category_id])
-    # end
+    def allCategories
+      @allCategories = Category.all
+    end
 
 
 end
