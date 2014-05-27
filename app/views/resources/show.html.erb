@@ -7,6 +7,7 @@
 
 <% @resource.comments.each do |comment| %>
   <%= comment.content %>
+  <%= comment.user.name %>
 <% end %>
 
 <br>
