@@ -26,20 +26,19 @@
 </div> -->
 
 
-<ul>
-
-  <li class="<%= 'active' if params[:controller] == 'categories' %>"><%= link_to "CATEGORIES", categories_path %></li>
+<ul class="side-nav">
 
   <li class="<%= 'active' if params[:controller] == 'languages' %>"><%= link_to "LANGUAGES", languages_path %></li>
 
-  <% if user_signed_in? %>
+  <li class="<%= 'active' if params[:controller] == 'categories' %>"><%= link_to "CATEGORIES", categories_path %></li>
+
+<!--   <% if user_signed_in? %>
     <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
     <li><%= link_to "Account Settings", edit_user_registration_path %></li>
     <li><%= link_to "Submit Resource", new_resource_path %></li>
   <% else %>
     <li><%= link_to "Sign in", new_user_session_path %></li>
     <li><%= link_to "Sign up", new_user_registration_path %></li>
-  <% end %>
+  <% end %> -->
 
 </ul>
-

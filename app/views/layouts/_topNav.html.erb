@@ -1,0 +1,52 @@
+<div class="contain-to-grid sticky">
+  <nav class="top-bar" data-topbar data-options="sticky_on: large">
+
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to "CODE UNION", root_path %></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+
+<!--     <section class="top-bar-section">
+      <ul class="right">
+        <li class="has-dropdown">
+          <a href="#">ACCOUNT</a>
+          <ul class="dropdown">
+            <% if user_signed_in? %>
+              <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+              <li><%= link_to "Submit Resource", new_resource_path %></li>
+              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Sign in", new_user_session_path %></li>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
+    </section> -->
+
+    <section class="top-bar-section">
+      <ul class="right">
+        <% if user_signed_in? %>
+          <li class="has-dropdown">
+            <a href="#">ACCOUNT</a>
+            <ul class="dropdown">
+              <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+              <li><%= link_to "Submit Resource", new_resource_path %></li>
+              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
+
+        <% else %>
+          <li><%= link_to "Sign in", new_user_session_path %></li>
+          <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </section>
+
+  </nav>
+</div>
+
+
+

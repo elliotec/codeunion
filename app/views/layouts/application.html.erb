@@ -17,27 +17,33 @@
 
 <body>
 
-  <%= link_to 'LOGO', root_path %>
 
+  <%= render 'layouts/topNav' %>
 
-  <%= render 'layouts/navbar' %>
+  <div class="row">
 
+    <div class="large-3 columns">
+      <%= render 'layouts/navbar' %>
+      <%= form_tag resources_path, :method => :get do %>
+        <p>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "Search", :name => nil %>
+        </p>
+      <% end %>
+    </div>
 
-<%= form_tag resources_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
+    <div class="large-9 columns">
+      <%= yield(:pagetitle) %>
+      <%= yield %>
+    </div>
 
-
+  </div>
 
   <% flash.each do |name, msg| %>
        <%= content_tag(:div, msg, class: "alert alert-info") %>
   <% end %>
 
-  <%= yield(:pagetitle) %>
-  <%= yield %>
+
 
 </body>
 
