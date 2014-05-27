@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require turbolinks
 //= require fixed-bootstrap.min
 //= require ckeditor/override
 //= require ckeditor/init
 //= require_tree .
+
+$(function(){ $(document).foundation(); });
