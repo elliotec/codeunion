@@ -18,7 +18,6 @@ class ResourcesController < ApplicationController
   end
 
   def index
-    @resources = Resource.all
 
     @search = Resource.search do
       fulltext params[:search]
