@@ -27,10 +27,10 @@ group :development, :test do
   gem 'minitest-rails-capybara', '0.10.0'
   gem 'simplecov', '0.8.2'
   gem 'sqlite3', '1.3.8'
-  gem 'sunspot_solr'
   gem 'turn', '0.9.6'
   gem 'quiet_assets', '1.0.2'
 end
 
 gem 'sunspot_rails'
+gem 'sunspot_solr'
 
