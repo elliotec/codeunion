@@ -23,8 +23,10 @@ class LanguagesController < ApplicationController
 
     respond_to do |format|
       if @language.save
-        format.html { redirect_to @language, notice: 'Language was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Language was successfully created.' }
         format.json { render action: 'show', status: :created, location: @language }
+        # format.html { redirect_to @language, notice: 'Language was successfully created.' }
+        # format.json { render action: 'show', status: :created, location: @language }
       else
         format.html { render action: 'new' }
         format.json { render json: @language.errors, status: :unprocessable_entity }
