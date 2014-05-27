@@ -20,3 +20,22 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$(function() {
+
+  var languagePanels = $('.languageNavItem');
+  var categoryPanels = $('.categoryNavItem');
+  var allPanels = $('.languageNavItem, .categoryNavItem').hide();
+
+  $('#languages').click(function() {
+    languagePanels.slideToggle();
+    categoryPanels.slideUp();
+    return false;
+  });
+
+  $('#categories').click(function() {
+    categoryPanels.slideToggle();
+    languagePanels.slideUp();
+    return false;
+  });
+});

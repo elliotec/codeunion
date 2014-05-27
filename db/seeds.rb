@@ -15,10 +15,16 @@ Language.create(name: "Java")
 
 Category.create(name: "Book")
 Category.create(name: "Bootcamp")
+Category.create(name: "Website")
 Category.create(name: "Blog")
 Category.create(name: "Game")
 Category.create(name: "Video")
 Category.create(name: "University")
+
+Resource.create(name: "Rails Guides",
+                body: "http://guides.rubyonrails.org/",
+                language_id: 1,
+                category_id: 3)
 
 @user = User.create(email: "user@user.com",
                     password: "password",
