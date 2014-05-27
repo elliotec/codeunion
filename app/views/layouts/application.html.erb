@@ -18,32 +18,24 @@
 <body>
 
 
-  <%= render 'layouts/topNav' %>
+  <%= render 'layouts/header' %>
 
-  <div class="row">
+  <nav class="large-3 columns">
+    <%= render 'layouts/sliderNav' %>
+  </nav>
 
-    <div class="large-3 columns">
-      <%= render 'layouts/sideNav' %>
-      <%= form_tag resources_path, :method => :get do %>
-        <p>
-          <%= text_field_tag :search, params[:search] %>
-          <%= submit_tag "Search", :name => nil %>
-        </p>
-      <% end %>
-    </div>
-
-    <div class="large-9 columns">
+  <main class="large-9 columns">
+    <div>
       <%= yield(:pagetitle) %>
       <%= yield %>
     </div>
 
-  </div>
+  </main>
 
+  <!--what does this do?-->
   <% flash.each do |name, msg| %>
-       <%= content_tag(:div, msg, class: "alert alert-info") %>
+  <%= content_tag(:div, msg, class: "alert alert-info") %>
   <% end %>
-
-
 
 </body>
 

@@ -1,0 +1,30 @@
+<ul id="accordion">
+
+<li>
+<%= form_tag resources_path, :method => :get do %>
+<p>
+<%= text_field_tag :search, params[:search] %>
+<%= submit_tag "Search", :name => nil %>
+</p>
+<% end %>
+</li>
+
+
+<li class="navCategory">
+<h2 id="languages">LANGUAGES</h2>
+</li>
+<% @allLanguages.each do |language| %>
+<%= link_to '/' + language.name do %>
+<li class="languageNavItem"><%= language.name %></li>
+<% end %>
+<% end %>
+
+<li class="navCategory">
+<h2 id="categories">CATEGORIES</h2>
+</li>
+<% @allCategories.each do |category| %>
+<%= link_to '/' + category.name do %>
+<li class="categoryNavItem"><%= category.name %></li>
+<% end %>
+<% end %>
+</ul>
