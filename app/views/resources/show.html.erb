@@ -1,9 +1,37 @@
 <%= content_for(:pagetitle, "#{@resource.name}") %>
-<p><%= @resource.body.html_safe %></p>
-<% if can? :update, @resource %>
-<%= link_to 'Edit', edit_resource_path(@resource) %> |
+<%= @resource.body.html_safe %>
+
+<br>
+
+<ul>
+<% @resource.comments.each do |comment| %>
+  <li><%= comment.content %></li>
 <% end %>
+</ul>
+
+<br>
+
+<%= form_for(@resource.comments.build) do |f| %>
+  <div class="field">
+    <%= f.label Comment %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :resource_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<br>
+
+<% if can? :update, @resource %>
+  <%= link_to 'Edit', edit_resource_path(@resource) %> |
+<% end %>
+
 <%= link_to 'Back', resources_path %>
+
 <% if can? :destroy, @resource %>
-<%= link_to 'Destroy', @resource, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Destroy', @resource, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>

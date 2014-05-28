@@ -1,24 +1,8 @@
 <h1>Resources</h1>
+  <% @resources.each do |resource| %>
+    <h2><%= link_to resource.name, resource %></h2>
+  <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @resources.each do |resource| %>
-      <tr>
-        <td><h2><%= link_to resource.name, resource %></h2></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
 <% if can? :update, @resource %>
   <%= link_to 'New Resource', new_resource_path %>
 <% end %>

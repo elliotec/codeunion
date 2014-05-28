@@ -4,6 +4,7 @@ gem 'bootstrap-sass', '3.1.0.2'
 gem 'cancancan', '~>1.7'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise', '3.2.3'
+gem 'foundation-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails', '3.1.0'
 gem 'rails', '4.0.3'
@@ -29,4 +30,8 @@ group :development, :test do
   gem 'turn', '0.9.6'
   gem 'quiet_assets', '1.0.2'
 end
+
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'jquery-turbolinks'
 

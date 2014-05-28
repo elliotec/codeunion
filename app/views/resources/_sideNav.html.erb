@@ -1,0 +1,5 @@
+<nav>
+  <% @resources.each do |resource| %>
+    <h2><%= link_to resource.name, resource %></h2>
+  <% end %>
+</nav>
