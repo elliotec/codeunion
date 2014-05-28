@@ -1,6 +1,11 @@
-header {
+body > header {
 	background-color: #242F3A;
 	color: #E5E5E5;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 }
 
 header h1 {
@@ -8,5 +13,7 @@ header h1 {
 }
 
 header li {
-	display: inline;
+	display: inline-block;
+	align-self: flex-end;
+	padding-right: 1em;
 }

@@ -1,24 +1,52 @@
-html {
-	font-size: 1em;
-	line-height: 1em;
+@font-face {
+  font-family: "League_Gothic";
+  src: url('../fonts/leaguegothic-regular-webfont.eot');
+  src: url('../fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/leaguegothic-regular-webfont.woff') format('woff'),
+    url('../fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+    url('../fonts/leaguegothic-regular-webfont.svg#League_Gothic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sofia_Pro_Light";
+  src: url('../fonts/sofiaprolight-webfont.eot');
+  src: url('../fonts/sofiaprolight-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/sofiaprolight-webfont.woff') format('woff'),
+    url('../fonts/sofiaprolight-webfont.ttf') format('truetype'),
+    url('../fonts/sofiaprolight-webfont.svg#Sofia_Pro_Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	font-family: "Sofia_Pro_Light";
+	color: #070707;
 }
 
 
+h1 {
+	font-family: "League_Gothic";
+	color: #662B2B;
+}
+
 
 /* DECORATION */
-a, a:visited {
+a, a:visited, a:hover {
 	text-decoration: none;
-	color: #070707;
 }
 
 li {
 	list-style: none;
 }
 
-
 /* PAGE STYLES */
-header h1 {
-	font-size: 2.618em;
-	padding: .5em 0;
+header > h1 {
+	font-size: 3.618em;
+	padding: 0.25em 0;
 	text-transform: uppercase;
+	font-family: "League_Gothic";
+	letter-spacing: 0.02em;
 }
+
