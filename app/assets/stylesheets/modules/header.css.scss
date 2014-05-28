@@ -8,12 +8,9 @@ body > header {
 	flex-wrap: nowrap;
 }
 
-header h1 {
-	display: inline;
-}
-
-header li {
+header a {
+	color: #E5E5E5;
 	display: inline-block;
 	align-self: flex-end;
-	padding-right: 1em;
+	margin-right: 1em;
 }

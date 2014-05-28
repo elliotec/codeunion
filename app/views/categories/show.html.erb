@@ -4,7 +4,7 @@
   <% @resources.each do |resource| %>
   <div class="post">
     <%= link_to resource_path(resource), :class => "list-group-item" do %>
-    <span class="badge admin-category-badge"><%= resource.language.name %></span>
+    <span ><%= resource.language.name %></span>
     <h3 class="list-group-item-heading"><%= resource.name %></h3>
     <% end %>
   </div>

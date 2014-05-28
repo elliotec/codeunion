@@ -3,8 +3,21 @@
 	background-color: #E5E5E5;
 }
 
+.resource-post.excerpt {
+	background-color: purple;
+}
+
 .post-topper {
 	background-color: #662B2B;
 	width: 100%;
 	height: 0.5em;
+}
+
+.excerpt-title {
+	color: green;
+}
+
+.excerpt-category {
+	display: inline-block;
+	border: solid 1px #262525;
 }

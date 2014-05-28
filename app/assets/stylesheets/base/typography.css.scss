@@ -23,7 +23,7 @@
 body {
 	font-family: "Sofia_Pro_Light";
 	color: #070707;
-	font-size: 18px;
+	font-size: 1.125em;
 }
 
 h1 {
@@ -40,10 +40,10 @@ h2 {
 	font-size: 4.236em;
 }
 
-h2, h3, h4 {
+h3, h4 {
 	font-size: 2.618em;
+	color: #242F3A;
 }
-
 
 /* DECORATION */
 a, a:visited, a:hover {
@@ -63,8 +63,8 @@ header > h1 {
 	letter-spacing: 0.02em;
 }
 
-input[type="text"] {
+input[type="text"], textarea {
 	font-family: "Sofia_Pro_Light";
-	font-size: 1.25em;
+	font-size: 1em;
 }
 
