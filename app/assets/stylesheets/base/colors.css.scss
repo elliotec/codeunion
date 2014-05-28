@@ -11,15 +11,55 @@
 */
 
 
-/* Do we need this? */
-.red {
-	color: red;
+/* Do we need this? - this is what changes the arrow color.  I made the class name more semantic and chose a better color*/
+.upVote {
+	color: green;
 }
 
-.yellow {
-  color: yellow;
+.glyphicon-arrow-up {}
+
+.downVote {
+  color: red;
 }
 
-.black {
-  color: black;
+html {
+  color: #e5e5e5;
 }
+
+body {
+  background-color: #fff;
+}
+
+.large-3.columns {
+  background-color: #070707;
+}
+
+.navCategory > h2 {
+  background-color: #070707;
+  color: #e5e5e5;
+}
+
+.languageNavItem, .categoryNavItem {
+  background-color: #262525;
+  color: #e5e5e5;
+  &:hover {
+    background-color: #070707;
+    color: #e5e5e5;
+  }
+}
+
+header, a {
+  background-color: #242F3A;
+  color: #e5e5e5;
+}
+
+a[href="/resources/new"] {
+  background-color: #662B2B;
+  color: #e5e5e5;
+  &:hover {
+    color: #070707;
+    background-color: #fff;
+    border: .0625em solid black;
+  }
+}
+
