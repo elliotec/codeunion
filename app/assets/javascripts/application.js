@@ -19,21 +19,29 @@
 //= require ckeditor/init
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(document).ready(function(){
 
-$(document).on('page:load', function() {
-
+//$(function(){
   $('.categories').hide();
+  $('.languages').hide();
 
   $('#languages').click(function() {
     $(".languages").slideToggle();
     $(".categories").slideToggle();
+    return false;
+  });
+
+  $('.languages2').click(function() {
+    $(".categories").hide();
   });
 
   $('#categories').click(function() {
     $(".languages").slideToggle();
     $(".categories").slideToggle();
+    return false;
   });
 
 });
 
+
+$(function(){ $(document).foundation(); });
