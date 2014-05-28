@@ -1,0 +1,170 @@
+/* FOUNDATION NAV SLIDER */
+
+.off-canvas-wrap {
+  -webkit-backface-visibility: hidden;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+	}
+  .off-canvas-wrap.move-right, .off-canvas-wrap.move-left {
+    min-height: 100em;
+    -webkit-overflow-scrolling: touch;
+  }
+
+.inner-wrap {
+  -webkit-backface-visibility: hidden;
+  position: relative;
+  width: 100%;
+  *zoom: 1;
+  -webkit-transition: -webkit-transform 500ms ease;
+  -moz-transition: -moz-transform 500ms ease;
+  -ms-transition: -ms-transform 500ms ease;
+  -o-transition: -o-transform 500ms ease;
+  transition: transform 500ms ease; }
+  .inner-wrap:before, .inner-wrap:after {
+    content: " ";
+    display: table; }
+  .inner-wrap:after {
+    clear: both; }
+
+.left-off-canvas-menu {
+  -webkit-backface-visibility: hidden;
+  width: 20rem;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  // overflow-y: auto;
+  z-index: 1001;
+  box-sizing: content-box;
+  -webkit-overflow-scrolling: touch;
+  -ms-transform: translate(-100%, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -moz-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  left: 0; }
+  .left-off-canvas-menu * {
+    -webkit-backface-visibility: hidden; }
+
+ul.off-canvas-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  ul.off-canvas-list li label {
+    padding: 0.3rem 0.9375rem;
+    color: #999999;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #444444;
+    border-top: 1px solid #5e5e5e;
+    border-bottom: none;
+    margin: 0; }
+  ul.off-canvas-list li a {
+    display: block;
+    padding: 0.66667rem;
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid #262626;
+    transition: background 300ms ease; }
+    ul.off-canvas-list li a:hover {
+      background: #242424; }
+
+.move-right > .inner-wrap {
+  -ms-transform: translate(20rem, 0);
+  -webkit-transform: translate3d(20rem, 0, 0);
+  -moz-transform: translate3d(20rem, 0, 0);
+  -ms-transform: translate3d(20rem, 0, 0);
+  -o-transform: translate3d(20rem, 0, 0);
+  transform: translate3d(20rem, 0, 0); }
+.move-right .exit-off-canvas {
+  -webkit-backface-visibility: hidden;
+  transition: background 300ms ease;
+  cursor: pointer;
+  box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+  display: block;
+  position: absolute;
+  // background: rgba(255, 255, 255, 0.2);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1002;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  @media only screen and (min-width: 40.063em) {
+    .move-right .exit-off-canvas:hover {
+      // background: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+.move-left > .inner-wrap {
+  -ms-transform: translate(-20rem, 0);
+  -webkit-transform: translate3d(-20rem, 0, 0);
+  -moz-transform: translate3d(-20rem, 0, 0);
+  -ms-transform: translate3d(-20rem, 0, 0);
+  -o-transform: translate3d(-20rem, 0, 0);
+  transform: translate3d(-20rem, 0, 0); }
+.move-left .exit-off-canvas {
+  -webkit-backface-visibility: hidden;
+  transition: background 300ms ease;
+  cursor: pointer;
+  box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+  display: block;
+  position: absolute;
+  // background: rgba(255, 255, 255, 0.2);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1002;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  @media only screen and (min-width: 40.063em) {
+    .move-left .exit-off-canvas:hover {
+      background: rgba(255, 255, 255, 0.05); } }
+
+.no-csstransforms .left-off-canvas-menu {
+  left: -15.625rem; }
+.no-csstransforms .right-off-canvas-menu {
+  right: -15.625rem; }
+.no-csstransforms .move-left > .inner-wrap {
+  right: 15.625rem; }
+.no-csstransforms .move-right > .inner-wrap {
+  left: 15.625rem; }
+
+/* END FOUNDATION NAV */
+
+#accordion li {
+	line-height: 3em;
+	text-transform: uppercase;
+	text-indent: 1em;
+}
+
+#languages, #categories, .navItem {
+	padding-left: 0.9375rem;
+}
+
+#accordion > h2 {
+	font-family: "Sofia_Pro_Light";
+	text-transform: uppercase;
+	line-height: 2em;
+	font-size: 1.618em;
+	color: #E5E5E5;
+	background-color: #070707;
+}
+
+.search {
+	background-color: #070707;
+	height: 3em;
+	padding-left: 0.9375rem;
+	padding-top: 0.9375rem;
+}
+
+.search input[type="text"] {
+ 	border: none;
+ 	width: 80%;
+ 	padding-left: 0.25em;
+}
+
+.search input:focus {
+	outline: none;
+}

@@ -1,0 +1,19 @@
+body > header {
+	background-color: #242F3A;
+	color: #E5E5E5;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+
+header h1 {
+	display: inline;
+}
+
+header li {
+	display: inline-block;
+	align-self: flex-end;
+	padding-right: 1em;
+}

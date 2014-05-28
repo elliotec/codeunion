@@ -17,18 +17,24 @@
 
 <body>
 
-
   <%= render 'layouts/header' %>
 
-  <nav class="large-3 columns">
-    <%= render 'layouts/sliderNav' %>
-  </nav>
+<!--FOUNDATION OFF-CANVAS -->
+<div class="off-canvas-wrap" data-offcanvas>
+  <a class="left-off-canvas-toggle" href="#" >Menu</a>
+  <div class="inner-wrap">
 
-  <main class="large-9 columns">
-    <div>
+
+  <aside class="left-off-canvas-menu">
+<!-- 		<nav> -->
+	    <%= render 'layouts/sliderNav' %>
+<!-- 	  <nav> -->
+	</aside>
+
+  <main class="large-6 columns">
       <h2><%= yield(:pagetitle) %></h2>
       <%= yield %>
-    </div>
+  </main>
 
 
     <!--what does this do?-->
@@ -37,6 +43,8 @@
     <% end %>
   </main>
 
+  </div>
+</div>
 </body>
 
 </html>
