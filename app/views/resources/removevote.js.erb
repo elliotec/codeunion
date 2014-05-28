@@ -1,2 +1,3 @@
-$('#arrow_resource_<%= @resource.id %>').removeClass('red')
+$('#arrow_resource_<%= @resource.id %>').removeClass('upVote, glyphicon-arrow-up')
+$('#arrow_resource_<%= @resource.id %>').addClass('downVote, glyphicon-arrow-down')
 $('#votes_resource_<%= @resource.id %>').text('<%= @resource.votes.size %>')

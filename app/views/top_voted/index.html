@@ -5,7 +5,7 @@
   <div class="post">
     <div class="list-group-item">
         <%= link_to upvote_url(id: resource.id), :remote => :true do %>
-            <span class="glyphicon glyphicon-arrow-up<%= ' red' if (current_user && current_user.voted_for?(resource)) %>" id="arrow_resource_<%= resource.id %>"></span>
+            <span class="glyphicon glyphicon-arrow-up<%= 'upVote' if (current_user && current_user.voted_for?(resource)) %>" id="arrow_resource_<%= resource.id %>"></span>
         <% end %>
     <span id="votes_resource_<%= resource.id %>"><%= resource.votes.size %></span>
     <%= link_to resource_path(resource) do %>
