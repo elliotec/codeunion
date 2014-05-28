@@ -40,10 +40,6 @@ ActiveRecord::Schema.define(version: 20140526204749) do
     t.datetime "updated_at"
     t.integer  "language_id"
     t.integer  "category_id"
-    t.string   "img_file_name"
-    t.string   "img_content_type"
-    t.integer  "img_file_size"
-    t.datetime "img_updated_at"
   end
 
   create_table "users", force: true do |t|
