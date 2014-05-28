@@ -1,23 +1,30 @@
 .resource-post {
-	padding: 1.5em;
+	padding: 0.5em;
 	background-color: #E5E5E5;
+	border-top: solid 0.5em #662B2B;
+	margin-bottom: 1em;
+	overflow: auto;
+	clear: both;
 }
 
 .resource-post.excerpt {
-	background-color: purple;
-}
-
-.post-topper {
-	background-color: #662B2B;
-	width: 100%;
-	height: 0.5em;
+	background-color: #E5E5E5;
 }
 
 .excerpt-title {
-	color: green;
+	font-family: "League_Gothic";
+	text-transform: uppercase;
+	font-size: 2.618em;
+	color: #662B2B;
 }
 
 .excerpt-category {
 	display: inline-block;
 	border: solid 1px #262525;
+	padding: 0.2em;
+	text-transform: capitalize;
+}
+
+.vote {
+	text-align: center;
 }
