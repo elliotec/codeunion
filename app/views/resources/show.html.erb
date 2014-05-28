@@ -5,10 +5,11 @@
 
 <br>
 
+<ul>
 <% @resource.comments.each do |comment| %>
-  <%= comment.content %>
-  <%= comment.user.name %>
+  <li><%= comment.content %></li>
 <% end %>
+</ul>
 
 <br>
 

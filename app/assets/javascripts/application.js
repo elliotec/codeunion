@@ -21,21 +21,19 @@
 
 $(function(){ $(document).foundation(); });
 
-$(function() {
+$(document).on('page:load', function() {
 
-  var languagePanels = $('.languageNavItem');
-  var categoryPanels = $('.categoryNavItem');
-  var allPanels = $('.languageNavItem, .categoryNavItem').hide();
+  $('.categories').hide();
 
   $('#languages').click(function() {
-    languagePanels.slideToggle();
-    categoryPanels.slideUp();
-    return false;
+    $(".languages").slideToggle();
+    $(".categories").slideToggle();
   });
 
   $('#categories').click(function() {
-    categoryPanels.slideToggle();
-    languagePanels.slideUp();
-    return false;
+    $(".languages").slideToggle();
+    $(".categories").slideToggle();
   });
+
 });
+
