@@ -11,13 +11,13 @@
  *= require_self
  //= require foundation_and_overrides
 
- *= require reset
- *= require typography
- *= require colors
- *= require layout
- *= require header
- *= require nav
- *= require resources
+ *= require base/reset
+ *= require base/typography
+ *= require base/colors
+ *= require layout/layout
+ *= require modules/header
+ *= require modules/nav
+ *= require modules/resources
 
  */
 
