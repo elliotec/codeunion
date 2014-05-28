@@ -5,9 +5,7 @@
 - White (all white text, article BG): #E5E5E5
 - Gray (login BG, secondary-nav-items: #262525
 - Black (all black text, primary-nav-items): #070707
-
 - #FFF white can also be used for form fields, buttons
-
 */
 
 /* Do we need this? - this is what changes the arrow color.  I made the class name more semantic and chose a better color*/
@@ -27,11 +25,6 @@ body {
   background-color: #fff;
 }
 
-// .large-3.columns {
-//   background-color: #070707;
-//   padding-bottom: 5em;
-// }
-
 .navCategory > h2 {
   background-color: #070707;
   font-family: "Sofia_Pro_Light";
@@ -39,7 +32,7 @@ body {
   color: #e5e5e5;
 }
 
-.languageNavItem, .categoryNavItem {
+.navItem {
   background-color: #262525;
   color: #e5e5e5;
   &:hover {

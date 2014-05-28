@@ -11,9 +11,9 @@
  *= require_self
 
  *= require base/reset
- *= require foundation_and_overrides
  *= require base/typography
  *= require base/colors
+ *= require layout/foundation-grid
  *= require layout/layout
  *= require modules/header
  *= require modules/nav
@@ -21,7 +21,7 @@
 
  */
 
- @import "bootstrap";
+/*  @import "bootstrap"; */
 
 
 

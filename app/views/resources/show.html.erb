@@ -2,7 +2,7 @@
 <article class="resource-post">
 	<%= content_for(:pagetitle) %>
 
-	<h2><%= @resource.name %></h2>
+	<h1><%= @resource.name %></h1>
 	<%= @resource.body.html_safe %>
 
 	<% @resource.comments.each do |comment| %>
@@ -15,8 +15,6 @@
 
 	    <%= f.submit %>
 	<% end %>
-
-	<br>
 
 	<% if can? :update, @resource %>
 	  <%= link_to 'Edit', edit_resource_path(@resource) %> |

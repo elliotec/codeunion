@@ -23,6 +23,7 @@
 body {
 	font-family: "Sofia_Pro_Light";
 	color: #070707;
+	font-size: 18px;
 }
 
 h1 {
@@ -60,5 +61,10 @@ header > h1 {
 	text-transform: uppercase;
 	font-family: "League_Gothic";
 	letter-spacing: 0.02em;
+}
+
+input[type="text"] {
+	font-family: "Sofia_Pro_Light";
+	font-size: 1.25em;
 }
 
