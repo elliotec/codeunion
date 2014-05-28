@@ -2,16 +2,12 @@
 <article class="resource-post">
 	<%= content_for(:pagetitle) %>
 
-	<h1><%= @resource.name %></h1>
+	<h2><%= @resource.name %></h2>
 	<%= @resource.body.html_safe %>
 
-	<br>
-
 	<% @resource.comments.each do |comment| %>
-	  <%= comment.content %>
+	<p><%= comment.content %></p>
 	<% end %>
-
-	<br>
 
 	<%= form_for(@resource.comments.build) do |f| %>
 	    <%= f.text_area :content %>

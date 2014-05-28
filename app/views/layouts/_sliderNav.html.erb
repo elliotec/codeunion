@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- <ul id="accordion">
   <li>
     <%= form_tag resources_path, :method => :get do %>
@@ -28,17 +29,35 @@
 </ul>
  -->
 
+<%= form_tag resources_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
 
 
-        <ul id="accordion">
-  <li>
-    <%= form_tag resources_path, :method => :get do %>
-    <p>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil %>
-    </p>
+
+<ul id="accordion">
+	<h2 id="languages">LANGUAGES</h2>
+<ul class="languages">
+  <% @allLanguages.each do |language| %>
+    <%= link_to '/' + language.name do %>
+      <li><%= language.name %></li>
     <% end %>
-  </li>
+  <% end %>
+</ul>
+
+<h2 id="categories">CATEGORIES</h2>
+<ul class="categories">
+  <% @allCategories.each do |category| %>
+    <%= link_to '/' + category.name do %>
+      <li class="categoryNavItem"><%= category.name %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<!--
 
   <li class="navCategory">
     <h2 id="languages">LANGUAGES</h2>
@@ -57,6 +76,35 @@
   <li class="categoryNavItem"><%= category.name %></li>
   <% end %>
   <% end %>
+ -->
+
+
 </ul>
 
 
+=======
+
+<!-- <ul id="accordion">
+
+<li class="navCategory">
+<h2 id="languages">LANGUAGES</h2>
+</li>
+<% @allLanguages.each do |language| %>
+<%= link_to '/' + language.name do %>
+<li class="languageNavItem"><%= language.name %></li>
+<% end %>
+<% end %>
+
+<li class="navCategory">
+<h2 id="categories">CATEGORIES</h2>
+</li>
+<% @allCategories.each do |category| %>
+<%= link_to '/' + category.name do %>
+<li class="categoryNavItem"><%= category.name %></li>
+<% end %>
+<% end %>
+</ul>
+ -->
+
+
+>>>>>>> cf4536b82cd8c96092156c829ff698b82e7fb7ee
