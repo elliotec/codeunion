@@ -11,15 +11,17 @@
  *= require_self
  //= require foundation_and_overrides
 
- * require style
- *= require codeunion
- */
+ *= require base/reset
+ *= require base/typography
+ *= require base/colors
+ *= require layout/layout
+ *= require modules/header
+ *= require modules/nav
+ *= require modules/resources
 
-/* @import "bootstrap"; */
+ */
 
 @import "bootstrap";
 
-.red {
-  color: red;
-}
+
 
