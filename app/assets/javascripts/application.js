@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require foundation
 //= require turbolinks
 //= require fixed-bootstrap.min
@@ -19,23 +20,41 @@
 //= require ckeditor/init
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
 
-$(function() {
+//$(document).ready(function(){
 
-  var languagePanels = $('.languageNavItem');
-  var categoryPanels = $('.categoryNavItem');
-  var allPanels = $('.languageNavItem, .categoryNavItem').hide();
+$(function(){
+  //$('.categories').hide();
+  // $('.languages').hide();
 
   $('#languages').click(function() {
-    languagePanels.slideToggle();
-    categoryPanels.slideUp();
-    return false;
+    $(".languages").slideToggle();
   });
 
   $('#categories').click(function() {
-    categoryPanels.slideToggle();
-    languagePanels.slideUp();
-    return false;
+    $(".categories").slideToggle();
   });
+
 });
+
+
+$(function(){ $(document).foundation(); });
+
+// $(function() {
+
+//   var languagePanels = $('.languageNavItem');
+//   var categoryPanels = $('.categoryNavItem');
+//   var allPanels = $('.languageNavItem, .categoryNavItem').hide();
+
+//   $('#languages').click(function() {
+//     languagePanels.slideToggle();
+//     categoryPanels.slideUp();
+//     return false;
+//   });
+
+//   $('#categories').click(function() {
+//     categoryPanels.slideToggle();
+//     languagePanels.slideUp();
+//     return false;
+//   });
+// });
