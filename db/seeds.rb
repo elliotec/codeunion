@@ -12,6 +12,7 @@ Language.create(name: "Javascript")
 Language.create(name: "PHP")
 Language.create(name: "Objective-C")
 Language.create(name: "Java")
+Language.create(name: "Other")
 
 Category.create(name: "Book")
 Category.create(name: "Bootcamp")
@@ -25,6 +26,47 @@ Resource.create(name: "Rails Guides",
                 body: "http://guides.rubyonrails.org/",
                 language_id: 1,
                 category_id: 3)
+Resource.create(name: "Getting Started With Foundation",
+                body: "http://foundation.zurb.com/docs/",
+                language_id: 1,
+                category_id: 3)
+Resource.create(name: "Search with Sunspot",
+                body: "http://railscasts.com/episodes/278-search-with-sunspot",
+                language_id: 1,
+                category_id: 6)
+Resource.create(name: "Active Record Basics",
+                body: "http://guides.rubyonrails.org/active_record_basics.html",
+                language_id: 1,
+                category_id: 3)
+Resource.create(name: "Codecademy",
+                body: "http://www.codecademy.com/dashboard",
+                language_id: 7,
+                category_id: 3)
+Resource.create(name: "Stack Overflow",
+                body: "http://stackoverflow.com",
+                language_id: 7,
+                category_id: 3)
+Resource.create(name: "Code Fellows",
+                body: "https://www.codefellows.org",
+                language_id: 7,
+                category_id: 2)
+Resource.create(name: "Thinkful",
+                body: "https://www.thinkful.com",
+                language_id: 7,
+                category_id: 3)
+Resource.create(name: "How to be a Programmer: A Short, Comprehensive, and Personal Summary",
+                body: "http://samizdat.mines.edu/howto/HowToBeAProgrammer.html#id2792906",
+                language_id: 7,
+                category_id: 4)
+Resource.create(name: "Designer vs Developer: BE THE UNICORN",
+                body: "http://www.slideshare.net/saracannon/wcatl2013",
+                language_id: 7,
+                category_id: 4)
+
+
+
+
+
 
 @user = User.create(email: "user@user.com",
                     password: "password",

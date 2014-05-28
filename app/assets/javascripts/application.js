@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require foundation
 //= require turbolinks
 //= require fixed-bootstrap.min
@@ -19,29 +20,41 @@
 //= require ckeditor/init
 //= require_tree .
 
-$(document).ready(function(){
 
-//$(function(){
-  $('.categories').hide();
-  $('.languages').hide();
+//$(document).ready(function(){
+
+$(function(){
+  //$('.categories').hide();
+  // $('.languages').hide();
 
   $('#languages').click(function() {
     $(".languages").slideToggle();
-    $(".categories").slideToggle();
-    return false;
-  });
-
-  $('.languages2').click(function() {
-    $(".categories").hide();
   });
 
   $('#categories').click(function() {
-    $(".languages").slideToggle();
     $(".categories").slideToggle();
-    return false;
   });
 
 });
 
 
 $(function(){ $(document).foundation(); });
+
+// $(function() {
+
+//   var languagePanels = $('.languageNavItem');
+//   var categoryPanels = $('.categoryNavItem');
+//   var allPanels = $('.languageNavItem, .categoryNavItem').hide();
+
+//   $('#languages').click(function() {
+//     languagePanels.slideToggle();
+//     categoryPanels.slideUp();
+//     return false;
+//   });
+
+//   $('#categories').click(function() {
+//     categoryPanels.slideToggle();
+//     languagePanels.slideUp();
+//     return false;
+//   });
+// });

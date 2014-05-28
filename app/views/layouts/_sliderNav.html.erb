@@ -1,14 +1,11 @@
-<!-- <ul id="accordion">
-
-<li>
 <%= form_tag resources_path, :method => :get do %>
-<p>
-<%= text_field_tag :search, params[:search] %>
-<%= submit_tag "Search", :name => nil %>
-</p>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
 <% end %>
-</li>
 
+<!-- <ul id="accordion">
 
 <li class="navCategory">
 <h2 id="languages">LANGUAGES</h2>
@@ -27,22 +24,14 @@
 <li class="categoryNavItem"><%= category.name %></li>
 <% end %>
 <% end %>
-</ul> -->
-
-
-<%= form_tag resources_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
-
+</ul>
+ -->
 
 <h2 id="languages">LANGUAGES</h2>
 <ul class="languages">
   <% @allLanguages.each do |language| %>
     <%= link_to '/' + language.name do %>
-      <li class="languages2"><%= language.name %></li>
+      <li><%= language.name %></li>
     <% end %>
   <% end %>
 </ul>
@@ -55,4 +44,3 @@
     <% end %>
   <% end %>
 </ul>
-
