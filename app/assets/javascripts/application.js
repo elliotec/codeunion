@@ -13,9 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require foundation-js/foundation/foundation.offcanvas
-//= require foundation-js/vendor/jquery
-//= require foundation-js/foundation/foundation
+//= require foundation.min
 //= require turbolinks
 //= require fixed-bootstrap.min
 //= require ckeditor/override
@@ -27,8 +25,6 @@
 //$(document).ready(function(){
 
 $(function(){
-  // $('.categories').hide();
-  // $('.languages').hide();
 
   $('#languages').click(function() {
     $(".languages").slideToggle();

@@ -3,9 +3,9 @@ class CommentsController < ApplicationController
   before_action :set_user
 
   before_filter :authenticate_user!
-  before_filter do
-    redirect_to new_user_session_path unless current_user.moderator == true
-  end
+  # before_filter do
+  #   redirect_to new_user_session_path unless current_user.moderator == true
+  # end
 
   def index
     @comments = Comment.all

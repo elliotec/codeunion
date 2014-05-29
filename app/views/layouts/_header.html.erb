@@ -2,8 +2,10 @@
   <!--this is the logo-->
   <h1><%= link_to "Code Union", root_path %></h1>
 
+
+
   <!--this is the + resource button-->
-  <nav>
+  <nav class="show-for-large-up">
     <% if user_signed_in? %>
       <%= link_to "Account Settings", edit_user_registration_path %>
       <%= link_to "Log out", destroy_user_session_path, method: :delete %>
