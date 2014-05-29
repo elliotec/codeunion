@@ -2,8 +2,8 @@
 	<%= content_for(:pagetitle) %>
 	<h1><%= @resource.name %></h1>
 	<p><%= @resource.body.html_safe %></p>
-	<a href="http://twitter.com/share?url=http://codeunion2.herokuapp.com" class="button"><span class="icon-twitter"></span></a>
-	<a href="http://www.facebook.com/sharer.php?u=http://codeunion2.herokuapp.com" class="button"><span class="icon-facebook"></span></a>
+	<a href="http://twitter.com/share?url=http://codeunion2.herokuapp.com" class="button social"><span class="icon-twitter"></span></a>
+	<a href="http://www.facebook.com/sharer.php?u=http://codeunion2.herokuapp.com" class="button social"><span class="icon-facebook"></span></a>
 </article>
 
 <article class="resource-comments">
@@ -22,7 +22,7 @@
 	  <%= link_to 'Edit', edit_resource_path(@resource) %> |
 	<% end %>
 
-	<%= link_to 'Back', resources_path %>
+	<%= link_to 'Back', resources_path, :class => "hide" %>
 
 	<% if can? :destroy, @resource %>
 	  <%= link_to 'Destroy', @resource, method: :delete, data: { confirm: 'Are you sure?' } %>

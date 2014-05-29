@@ -1,8 +1,16 @@
-<h1 class="page-title">Resources</h1>
+<h2 class="page-title">Resources</h2>
   <% @resources.each do |resource| %>
-    <h2><%= link_to resource.name, resource %></h2>
-  <% end %>
+  <article class="excerpt">
+  	<section class="large-10 medium-10 small-10 columns">
+    <%= link_to resource_path(resource) do %>
+		    <h3 class="excerpt-title"><%= resource.name %></h3>
+		    <% end %>
 
+  	<p class="excerpt-language"><%= resource.language.name %></p>
+		<p class="excerpt-category"><%= resource.category.name %></p>
+		</section>
+	</article>
 <% if can? :update, @resource %>
   <%= link_to 'New Resource', new_resource_path %>
 <% end %>
+ <% end %>

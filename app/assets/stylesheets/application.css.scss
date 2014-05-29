@@ -20,11 +20,13 @@
  *= require modules/header
  *= require modules/nav
  *= require modules/resources
+ *= require modules/comments
 
  */
 
 /*  @import "bootstrap"; */
 
+<<<<<<< HEAD
 @import "foundation/components/visibility";
 
 // Media Query Ranges
@@ -65,3 +67,8 @@ $cursor-default-value: default;
 $cursor-pointer-value: pointer;
 $cursor-help-value: help;
 $cursor-text-value: text;
+=======
+.hide {
+	display: none;
+}
+>>>>>>> a35b3e11fd0d6bf2250a7dce52bde9832b2f14d1
