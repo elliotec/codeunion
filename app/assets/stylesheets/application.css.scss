@@ -21,7 +21,12 @@
  *= require modules/header
  *= require modules/nav
  *= require modules/resources
+ *= require modules/comments
 
  */
 
 /*  @import "bootstrap"; */
+
+.hide {
+	display: none;
+}

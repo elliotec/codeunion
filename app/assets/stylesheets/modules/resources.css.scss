@@ -20,36 +20,44 @@
 	font-size: 2.618em;
 	color: #662B2B;
 	padding-bottom: 0.2em;
+	&:hover {
+		color: #262525;
+	}
+}
+
+.excerpt-category, .excerpt-language {
+	display: inline-block;
+	font-size: 0.8em;
+	padding: 0.3em;
+	text-transform: capitalize;
+	color: #fff;
+	margin-right: 0.5em;
+}
+
+.excerpt-language {
+	background-color: lighten(desaturate(#662b2b, 15%), 15%);
+
 }
 
 .excerpt-category {
-	display: inline-block;
-	font-size: 0.8em;
-	border: solid 1px #262525;
-	padding: 0.3em;
-	text-transform: capitalize;
+	background-color: lighten(desaturate(#242f3a, 15%), 15%);
 }
 
 .vote {
+	font-size: 1.618em;
 	text-align: center;
+
+
+}
+
+.vote-count {
+	background-color: #fff;
+	font-family: "League_Gothic";
+	color: #662b2b;
+	margin: 0.25em 0;
+	padding: 0.25em 0;
 }
 
 .resource-post > p:not(.exerpt-category) {
    padding: 2em 0 5em 0;
  }
-
-.resource-comments {
-	padding: 1em 3em;
-	background-color: darken(#E5E5E5, 10%);
-	font-size: 0.8em;
-}
-
-.resource-comments textarea {
-	width: 100%;
-	border: none;
-}
-
-.comment {
-	padding: 1em 0;
-	border-top: solid 1px #E5E5E5;
-}
