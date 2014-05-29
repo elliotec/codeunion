@@ -1,20 +1,22 @@
-<div class="post-topper"></div>
 <article class="resource-post">
 	<%= content_for(:pagetitle) %>
-
 	<h1><%= @resource.name %></h1>
-	<%= @resource.body.html_safe %>
+	<p><%= @resource.body.html_safe %></p>
+	<a href="http://twitter.com/share?url=http://codeunion2.herokuapp.com" class="button"><span class="icon-twitter"></span></a>
+	<a href="http://www.facebook.com/sharer.php?u=http://codeunion2.herokuapp.com" class="button"><span class="icon-facebook"></span></a>
+</article>
+
+<article class="resource-comments">
+	<%= form_for(@resource.comments.build) do |f| %>
+    <%= f.text_area :content %>
+    <%= f.hidden_field :resource_id %>
+    <%= f.submit :value=>"comment"%>
+	<% end %>
 
 	<% @resource.comments.each do |comment| %>
-	<p><%= comment.content %></p>
+	<p class="comment"><%= comment.content %></p>
 	<% end %>
-
-	<%= form_for(@resource.comments.build) do |f| %>
-	    <%= f.text_area :content %>
-	    <%= f.hidden_field :resource_id %>
-
-	    <%= f.submit %>
-	<% end %>
+</article>
 
 	<% if can? :update, @resource %>
 	  <%= link_to 'Edit', edit_resource_path(@resource) %> |
@@ -25,4 +27,4 @@
 	<% if can? :destroy, @resource %>
 	  <%= link_to 'Destroy', @resource, method: :delete, data: { confirm: 'Are you sure?' } %>
 	<% end %>
-</article>
+

@@ -5,13 +5,13 @@
   <!--this is the + resource button-->
   <nav>
     <% if user_signed_in? %>
-      <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-      <li><%= link_to '+ Resource', new_resource_path %></li>
+      <%= link_to "Account Settings", edit_user_registration_path %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+      <%= link_to '+ Resource', new_resource_path %>
     <% else %>
-      <li><%= link_to "Sign in", new_user_session_path %></li>
-      <li><%= link_to "Sign up", new_user_registration_path %></li>
-      <li><%= link_to '+ Resource', new_user_session_path %></li>
+      <%= link_to "Sign in", new_user_session_path %>
+      <%= link_to "Sign up", new_user_registration_path %>
+      <%= link_to '+ Resource', new_user_session_path %>
     <% end %>
   </nav>
 </header>

@@ -1,19 +1,21 @@
 <%= content_for(:pagetitle, generate_title) %>
 
-<div class="list-group">
-  <% @resources.each do |resource| %>
-  <div class="post">
-    <div class="list-group-item">
-        <%= link_to upvote_url(id: resource.id), :remote => :true do %>
-            <span class="glyphicon glyphicon-arrow-up<%= ' upVote' if (current_user && current_user.voted_for?(resource)) %>" id="arrow_resource_<%= resource.id %>"></span>
-        <% end %>
-    <span id="votes_resource_<%= resource.id %>"><%= resource.votes.size %></span>
-    <%= link_to resource_path(resource) do %>
 
-    <h3 class="list-group-item-heading"><%= resource.name %></h3>
-    <span class="badge admin-category-badge"><%= resource.category.name %></span>
-    <% end %>
-  </div>
-  </div>
+  <% @resources.each do |resource| %>
+	  <article class="excerpt">
+	    <section class="large-10 medium-10 small-10 columns">
+	    	<%= link_to resource_path(resource) do %>
+		    <h3 class="excerpt-title"><%= resource.name %></h3>
+		    <% end %>
+		    <p class="excerpt-category"><%= resource.category.name %></p>
+	  	</section>
+	  	<section class="vote large-2 medium-2 small-2 columns">
+	  		<%= link_to upvote_url(id: resource.id), :remote => :true do %>
+	          <p class="icon-arrow-up2<%= ' upVote' if (current_user && current_user.voted_for?(resource)) %>" id="arrow_resource_<%= resource.id %>"></p>
+	      <% end %>
+		    <p id="votes_resource_<%= resource.id %>"><%= resource.votes.size %></p>
+		    <p class="icon-arrow-down2"></p>
+	  	</section>
+	  </article>
   <% end %>
-</div>
+

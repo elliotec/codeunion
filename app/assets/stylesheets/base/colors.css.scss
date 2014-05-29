@@ -1,12 +1,53 @@
-/* HEX COLOR VALUES:
+/* DEFINE COLOR VARIABLES */
+$primary-color: #242F3A; // blue
+$secondary-color: #662B2B; // red
+$tertiary-color: #E5E5E5; // off-white
+$interactive-bg-color: #262525; // gray
+$black: #070707; // black
+$bg-color: #fff; // pure white
 
-- Blue (header, links): #242F3A
-- Red (h1, article bar, buttons): #662B2B
-- White (all white text, article BG): #E5E5E5
-- Gray (login BG, secondary-nav-items: #262525
-- Black (all black text, primary-nav-items): #070707
-- #FFF white can also be used for form fields, buttons
-*/
+html {
+  color: #070707;
+}
+
+body {
+  background-color: #fff;
+}
+
+header {
+	background-color: #242F3A;
+}
+
+a {
+  color: #242F3A;
+}
+
+.navCategory > h2 {
+  background-color: #070707;
+  font-family: "Sofia_Pro_Light";
+  font-size: 2.618em;
+  color: #E5E5E5;
+}
+
+.navItem {
+  background-color: #262525;
+  color: #E5E5E5;
+  &:hover {
+    background-color: #070707;
+    color: #E5E5E5;
+  }
+}
+
+/* ADD RESOURCE */
+a[href="/resources/new"] {
+  background-color: $secondary-color;
+  color: #E5E5E5;
+  &:hover {
+    color: #070707;
+    background-color: #fff;
+    border: 1px solid #070707;
+  }
+}
 
 /* Do we need this? - this is what changes the arrow color.  I made the class name more semantic and chose a better color*/
 .upVote {
@@ -16,43 +57,3 @@
 .downVote {
   color: red;
 }
-
-html {
-  color: #e5e5e5;
-}
-
-body {
-  background-color: #fff;
-}
-
-.navCategory > h2 {
-  background-color: #070707;
-  font-family: "Sofia_Pro_Light";
-  font-size: 2.618em;
-  color: #e5e5e5;
-}
-
-.navItem {
-  background-color: #262525;
-  color: #e5e5e5;
-  &:hover {
-    background-color: #070707;
-    color: #e5e5e5;
-  }
-}
-
-header, a {
-  background-color: #242F3A;
-  color: #e5e5e5;
-}
-
-a[href="/resources/new"] {
-  background-color: #662B2B;
-  color: #e5e5e5;
-  &:hover {
-    color: #070707;
-    background-color: #fff;
-    border: .0625em solid black;
-  }
-}
-
