@@ -1,10 +1,8 @@
 <% @welcomeVote.each do |resource| %>
-  <article class="resource-post excerpt">
+  <article class="excerpt">
   	<%= link_to resource_path(resource) do %>
     <h3 class="excerpt-title"><%= resource.name %></h3>
+  	<% end %>
     <p class="excerpt-category"><%= resource.category.name %></p>
-  <% end %>
 	</article>
 <% end %>
-
-

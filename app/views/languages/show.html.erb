@@ -5,9 +5,9 @@
 <article class="resource-post excerpt">
 	<% @resources.each do |resource| %>
 	 <%= link_to resource_path(resource) do %>
-	    <span class="resource-type"><%= resource.category.name %></span>
 	    <h3><%= resource.name %></h3>
 	  <% end %>
+	  <p class="resource-type"><%= resource.category.name %></p>
 	<% end %>
 </article>
 
