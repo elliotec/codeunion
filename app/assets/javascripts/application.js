@@ -12,13 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.turbolinks
 //= require foundation
 //= require turbolinks
 //= require fixed-bootstrap.min
 //= require ckeditor/override
 //= require ckeditor/init
 //= require_tree .
+//= require jquery.turbolinks
 
 
 //$(document).ready(function(){

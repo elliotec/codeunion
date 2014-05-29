@@ -19,9 +19,6 @@
 
   <%= render 'layouts/header' %>
 
-<!--FOUNDATION OFF-CANVAS -->
-<div class="off-canvas-wrap" data-offcanvas>
-  <a class="left-off-canvas-toggle" href="#" >Menu</a>
   <div class="inner-wrap">
 
 
@@ -41,10 +38,7 @@
     <% flash.each do |name, msg| %>
     <%= content_tag(:div, msg, class: "alert alert-info") %>
     <% end %>
-  </main>
-
-  </div>
-</div>
+   </div>
 </body>
 
 </html>
