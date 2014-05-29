@@ -8,7 +8,7 @@ body > header {
 	flex-wrap: nowrap;
 }
 
-header a {
+header a:not(.button) {
 	color: #E5E5E5;
 	display: inline-block;
 	align-self: flex-end;
