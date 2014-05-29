@@ -24,7 +24,7 @@
 //$(document).ready(function(){
 
 $(function(){
-  //$('.categories').hide();
+  // $('.categories').hide();
   // $('.languages').hide();
 
   $('#languages').click(function() {
