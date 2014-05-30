@@ -72,6 +72,9 @@ GEM
     docile (1.1.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    foundation-icons-sass-rails (3.0.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
     foundation-rails (5.2.2.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
@@ -207,6 +210,7 @@ DEPENDENCIES
   ckeditor
   coffee-rails (~> 4.0.0)
   devise (= 3.2.3)
+  foundation-icons-sass-rails
   foundation-rails
   jbuilder (~> 1.2)
   jquery-rails (= 3.1.0)

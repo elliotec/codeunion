@@ -27,10 +27,6 @@ $(function(){
     $(".languages").slideToggle();
   });
 
-  $('#languages').click(function() {
-    $(".languages").slideToggle();
-  });
-
   $('#categories').click(function() {
     $(".categories").slideToggle();
   });
@@ -40,11 +36,11 @@ $(function(){
   $(".categories2").hide();
   $(".languages2").hide();
 
-  $('#languages').click(function() {
+  $('#languages2').click(function() {
     $(".languages2").slideToggle();
   });
 
-  $('#categories').click(function() {
+  $('#categories2').click(function() {
     $(".categories2").slideToggle();
   });
 

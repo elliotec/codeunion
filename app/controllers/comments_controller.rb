@@ -29,8 +29,9 @@ class CommentsController < ApplicationController
         format.html {redirect_to resource_url(@resource), notice: 'Comment was successfully created.' }
         format.json { render action: 'show', status: :created, location: @comment }
       else
-        format.html { render action: 'new' }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
+        format.html {redirect_to resource_url(@resource), notice: 'Comment box cannot be empty.' }
+        # format.html { render action: 'new' }
+        # format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
   end

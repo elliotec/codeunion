@@ -34,4 +34,4 @@ end
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 gem 'jquery-turbolinks'
-
+gem 'foundation-icons-sass-rails'
