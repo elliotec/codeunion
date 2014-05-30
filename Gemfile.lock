@@ -202,7 +202,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  acts_as_votable
+  acts_as_votable (= 0.8.0)
   better_errors (= 1.1.0)
   binding_of_caller (= 0.7.2)
   bootstrap-sass (= 3.1.0.2)

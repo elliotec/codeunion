@@ -12,7 +12,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks', '2.2.1'
 gem 'uglifier', '>= 1.3.0'
 gem 'minitest-rails', '0.9.2'
-gem 'acts_as_votable'
+gem 'acts_as_votable', '0.8.0'
 gem 'ckeditor'
 
 group :production do
