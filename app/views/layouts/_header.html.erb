@@ -2,8 +2,6 @@
   <!--this is the logo-->
   <h1><%= link_to "Code Union", root_path %></h1>
 
-
-
   <!--this is the + resource button-->
   <nav class="show-for-large-up">
     <% if user_signed_in? %>
@@ -15,6 +13,8 @@
       <%= link_to "Sign up", new_user_registration_path %>
       <%= link_to '+ Resource', new_user_session_path, :class => 'add-resource button' %>
     <% end %>
+
+
   </nav>
 </header>
 
