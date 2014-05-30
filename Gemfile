@@ -4,6 +4,7 @@ gem 'bootstrap-sass', '3.1.0.2'
 gem 'cancancan', '~>1.7'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise', '3.2.3'
+gem 'foundation-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails', '3.1.0'
 gem 'rails', '4.0.3'
@@ -11,7 +12,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks', '2.2.1'
 gem 'uglifier', '>= 1.3.0'
 gem 'minitest-rails', '0.9.2'
-gem 'acts_as_votable'
+gem 'acts_as_votable', '0.8.0'
 gem 'ckeditor'
 
 group :production do
@@ -30,3 +31,7 @@ group :development, :test do
   gem 'quiet_assets', '1.0.2'
 end
 
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'jquery-turbolinks'
+gem 'foundation-icons-sass-rails'

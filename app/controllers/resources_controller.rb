@@ -18,7 +18,13 @@ class ResourcesController < ApplicationController
   end
 
   def index
-    @resources = Resource.all
+
+    @search = Resource.search do
+      fulltext params[:search]
+    end
+    @resources = @search.results
+
+    #@resources = Resource.all
   end
 
   def show
@@ -65,6 +71,7 @@ class ResourcesController < ApplicationController
   end
 
   private
+
     def set_resource
       @resource = Resource.find(params[:id])
     end

@@ -1,0 +1,64 @@
+.resource-post, .excerpt {
+	background-color: #E5E5E5;
+	border-top: solid 0.3em #662B2B;
+	margin-top: 1em;
+	overflow: auto;
+	clear: both;
+}
+
+.resource-post {
+	padding: 3em;
+}
+
+.resource-post p {
+	line-height: 1.5em;
+}
+
+.excerpt {
+	padding: 1em;
+}
+
+.excerpt-title {
+	font-family: "League_Gothic";
+	text-transform: uppercase;
+	font-size: 2.618em;
+	color: #662B2B;
+	padding-bottom: 0.2em;
+	&:hover {
+		color: #262525;
+	}
+}
+
+.excerpt-category, .excerpt-language {
+	display: inline-block;
+	font-size: 0.8em;
+	padding: 0.3em;
+	text-transform: capitalize;
+	color: #fff;
+	margin-right: 0.5em;
+}
+
+.excerpt-language {
+	background-color: lighten(desaturate(#662b2b, 15%), 15%);
+}
+
+.excerpt-category {
+	background-color: lighten(desaturate(#242f3a, 15%), 15%);
+}
+
+.vote {
+	font-size: 1.618em;
+	text-align: center;
+}
+
+.vote-count {
+	background-color: #fff;
+	font-family: "League_Gothic";
+	color: #662b2b;
+	margin: 0.25em 0;
+	padding: 0.25em 0;
+}
+
+.resource-post > p:not(.exerpt-category) {
+   padding: 2em 0 5em 0;
+ }

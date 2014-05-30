@@ -1,19 +1,23 @@
 <%= content_for(:pagetitle, "#{@category.name}") %>
+
 <div class="list-group">
   <% @resources.each do |resource| %>
   <div class="post">
     <%= link_to resource_path(resource), :class => "list-group-item" do %>
-    <span class="badge admin-category-badge"><%= resource.language.name %></span>
-    <h3 class="list-group-item-heading"><%= resource.name %></h3>
+    <span ><%= resource.language.name %></span>
+    <h3><%= resource.name %></h3>
     <% end %>
   </div>
   <% end %>
 </div>
 <!-- resource loop end -->
+
 <% if can? :update, @category %>
-<%= link_to 'Edit', edit_category_path(@category) %> |
+  <%= link_to 'Edit', edit_category_path(@category) %> |
 <% end %>
+
 <%= link_to 'Back', categories_path %> |
+
 <% if can? :update, @language %>
-<%= link_to 'Delete', @category,  method: :delete, data: { confirm: 'Are you sure?'} %>
+  <%= link_to 'Delete', @category,  method: :delete, data: { confirm: 'Are you sure?'} %>
 <% end %>

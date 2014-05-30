@@ -1,0 +1,42 @@
+button, input[type="submit"], .button {
+	font-family: "Sofia_Pro_Light";
+	text-transform: uppercase;
+	padding: 0.5em 1em;
+	background-color: #fff;
+	border: solid 1px #070707;
+	font-size: 1em;
+	&:hover {
+		background-color: #662b2b;
+		color: #e5e5e5;
+		cursor: pointer;
+	}
+}
+
+input[type="text"], textarea {
+	font-family: "Sofia_Pro_Light";
+	font-size: 1em;
+	line-height: auto;
+}
+
+.add-resource {
+	background-color: #662b2b;
+	color: #e5e5e5;
+	&:hover, :active {
+		background-color: #fff;
+		color: #070707;
+	}
+}
+
+.social {
+	margin-right: 1em;
+	padding: 0.5em 1.5em;
+}
+
+.resource-comments textarea {
+	margin-bottom: 1em;
+}
+
+.resource-comments p:first-of-type {
+	margin-top: 1em;
+}
+

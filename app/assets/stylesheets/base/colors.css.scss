@@ -1,0 +1,58 @@
+/* DEFINE COLOR VARIABLES */
+$primary-color: #242F3A; // blue
+$secondary-color: #662B2B; // red
+$tertiary-color: #E5E5E5; // off-white
+$interactive-bg-color: #262525; // gray
+$black: #070707; // black
+$bg-color: #fff; // pure white
+
+html {
+  color: #070707;
+}
+
+body {
+  background-color: #fff;
+}
+
+header {
+	background-color: #242F3A;
+}
+
+a {
+  color: #242F3A;
+  &:hover {
+  	color: #662b2b;
+	}
+}
+
+.navCategory > h2 {
+  background-color: #070707;
+
+  font-size: 2.618em;
+  color: #E5E5E5;
+}
+
+.navItem {
+  background-color: #262525;
+  color: #E5E5E5;
+  &:hover {
+    background-color: #070707;
+    color: #E5E5E5;
+  }
+}
+
+/* ADD RESOURCE */
+// a[href="/resources/new"] {
+//   background-color: $secondary-color;
+//   color: #E5E5E5;
+//   &:hover {
+//     color: #070707;
+//     background-color: #fff;
+//     border: 1px solid #070707;
+//   }
+// }
+
+/* Do we need this? - this is what changes the arrow color.  I made the class name more semantic and chose a better color*/
+.upVote {
+	color: #662b2b;
+}

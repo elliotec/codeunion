@@ -1,0 +1,22 @@
+<header class="large-12 columns">
+  <!--this is the logo-->
+  <h1><%= link_to "Code Union", root_path %></h1>
+
+  <nav class="show-for-large-up">
+    <% if user_signed_in? %>
+      <%= link_to "Account Settings", edit_user_registration_path %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+      <%= link_to '+ Resource', new_resource_path, :class => 'add-resource button' %>
+    <% else %>
+      <%= link_to "Sign in", new_user_session_path %>
+      <%= link_to "Sign up", new_user_registration_path %>
+      <%= link_to '+ Resource', new_user_session_path, :class => 'add-resource button' %>
+    <% end %>
+  </nav>
+
+  <nav class="hide-for-large-up">
+  	<h2 id="nav" class="hamburger icon-menu"></h2>
+  </nav>
+
+</header>
+
