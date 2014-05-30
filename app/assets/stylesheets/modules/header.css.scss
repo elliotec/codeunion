@@ -11,6 +11,19 @@ body > header {
 header a:not(.button) {
 	color: #E5E5E5;
 	display: inline-block;
-	align-self: flex-end;
 	margin-right: 1em;
+}
+
+header > nav {
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+}
+
+.hamburger {
+	position: absolute;
+	font-size: 2em;
+	top: 0.5em;
+	right: 0.5em;
+	color: #e5e5e5;
 }

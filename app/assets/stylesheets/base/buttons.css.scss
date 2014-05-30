@@ -15,17 +15,16 @@ button, input[type="submit"], .button {
 input[type="text"], textarea {
 	font-family: "Sofia_Pro_Light";
 	font-size: 1em;
-	//
+	line-height: auto;
 }
 
 .add-resource {
 	background-color: #662b2b;
 	color: #e5e5e5;
-	&:hover {
+	&:hover, :active {
 		background-color: #fff;
 		color: #070707;
 	}
-
 }
 
 .social {
