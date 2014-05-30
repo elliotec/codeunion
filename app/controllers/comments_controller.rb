@@ -2,7 +2,8 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :set_user
 
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
+
   # before_filter do
   #   redirect_to new_user_session_path unless current_user.moderator == true
   # end
@@ -60,7 +61,7 @@ class CommentsController < ApplicationController
 
 
     def admin?
-      self.moderator == true
+      current_user.moderator == true
     end
 
     def set_comment
