@@ -1,7 +1,11 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :set_user
-  #before_action :set_resource
+
+  before_filter :authenticate_user!
+  # before_filter do
+  #   redirect_to new_user_session_path unless current_user.moderator == true
+  # end
 
   def index
     @comments = Comment.all
@@ -52,6 +56,11 @@ class CommentsController < ApplicationController
   end
 
   private
+
+
+    def admin?
+      self.moderator == true
+    end
 
     def set_comment
       @comment = Comment.find(params[:id])

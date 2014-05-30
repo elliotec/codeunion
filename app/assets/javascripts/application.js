@@ -12,20 +12,20 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.turbolinks
 //= require foundation
+//= require foundation.min
 //= require turbolinks
 //= require fixed-bootstrap.min
 //= require ckeditor/override
 //= require ckeditor/init
 //= require_tree .
-
-
-//$(document).ready(function(){
+//= require jquery.turbolinks
 
 $(function(){
-  //$('.categories').hide();
-  // $('.languages').hide();
+
+  $('#languages').click(function() {
+    $(".languages").slideToggle();
+  });
 
   $('#languages').click(function() {
     $(".languages").slideToggle();
@@ -35,26 +35,24 @@ $(function(){
     $(".categories").slideToggle();
   });
 
+
+  $(".navStuff").hide();
+  $(".categories2").hide();
+  $(".languages2").hide();
+
+  $('#languages').click(function() {
+    $(".languages2").slideToggle();
+  });
+
+  $('#categories').click(function() {
+    $(".categories2").slideToggle();
+  });
+
+  $('#nav').click(function() {
+    $(".navStuff").slideToggle();
+  });
+
 });
 
 
 $(function(){ $(document).foundation(); });
-
-// $(function() {
-
-//   var languagePanels = $('.languageNavItem');
-//   var categoryPanels = $('.categoryNavItem');
-//   var allPanels = $('.languageNavItem, .categoryNavItem').hide();
-
-//   $('#languages').click(function() {
-//     languagePanels.slideToggle();
-//     categoryPanels.slideUp();
-//     return false;
-//   });
-
-//   $('#categories').click(function() {
-//     categoryPanels.slideToggle();
-//     languagePanels.slideUp();
-//     return false;
-//   });
-// });

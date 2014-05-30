@@ -11,7 +11,6 @@
 
 
  *= require_self
-
  *= require base/reset
  *= require base/colors
  *= require base/typography
@@ -27,6 +26,6 @@
 
 /*  @import "bootstrap"; */
 
-.hide {
-	display: none;
-}
+
+@import "foundation/components/visibility";
+

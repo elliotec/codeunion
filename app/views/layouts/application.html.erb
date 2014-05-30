@@ -18,20 +18,17 @@
 <body>
 
   <%= render 'layouts/header' %>
-
-<!--FOUNDATION OFF-CANVAS -->
-<div class="off-canvas-wrap" data-offcanvas>
-  <a class="left-off-canvas-toggle" href="#" >Menu</a>
-  <div class="inner-wrap">
+  <div class="large-12 columns">
+    <%= render 'layouts/hamburgerNav' %>
+  </div>
 
 
-  <aside class="left-off-canvas-menu">
-<!-- 		<nav> -->
-	    <%= render 'layouts/sliderNav' %>
-<!-- 	  <nav> -->
-	</aside>
 
-  <main class="large-push-2 large-8 medium-push-1 medium-10 columns">
+  <div class="large-3 columns">
+    <%= render 'layouts/sliderNav' %>
+  </div>
+
+  <main class="large-9 columns">
       <h2><%= yield(:pagetitle) %></h2>
       <%= yield %>
   </main>
@@ -41,10 +38,6 @@
     <% flash.each do |name, msg| %>
     <%= content_tag(:div, msg, class: "alert alert-info hide") %>
     <% end %>
-  </main>
-
-  </div>
-</div>
 </body>
 
 </html>
