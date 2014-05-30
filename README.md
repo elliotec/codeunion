@@ -1,14 +1,23 @@
 #Code Union
 
-This is a project for Code Fellows that aggregates good learning resources for code.
+This is a project for Code Fellows that aggregates good learning resources for code. 
 
-START RAILS SERVER?
-  rails s
+Group Members:
+Katie Brasfield
+Mark Palfreeman
+Garrett Sand
+Tyler Schneider
+Kevin Lewis
 
-WHERE TO PUT CSS/SASS?
-codeunion.css.scss
 
-Never work on master. :]
+Comments
+We added the ability for users to comment on resources. Admins/moderators can search for all comments on all resources and delete them as needed. The ability for users to edit comments was intentionally not included.
+
+Search
+We implemented search functionality using solr, sunspot and websolr. 
+
+
+
 
 
 <!-- # Contributors
