@@ -155,7 +155,7 @@ ul.off-canvas-list {
 .search {
 	background-color: #070707;
 	height: 3em;
-	padding: 0 0.9375rem;
+	padding: 0.5rem 0.25rem 0 0.9375rem;
   display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -166,19 +166,19 @@ ul.off-canvas-list {
 
 .search input[type="text"] {
  	border: none;
- 	width: 70%;
- 	// font-size: 1.25em;
- 	// line-height: 1.25em;
- 	padding: 0.5em 1em;
+ 	width: 80%;
+ 	padding: 0.5em 0.5em;
  	font-size: 1em;
  	line-height: 1em;
 }
 
 input[type="submit"].search-button {
-	text-transform: capitalize;
-	font-size: 0.75em;
-	line-height: 1em;
-	margin-left: 0.5em;
+	background: url('../images/search.svg') no-repeat top left;
+	background-size: 1.5em 1.5em;
+	padding: 0.25em;
+	margin-top: 0.25em;
+	line-height: 1.5em;
+	margin-left: 0.2em;
 }
 
 .search input:focus {
