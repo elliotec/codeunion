@@ -139,17 +139,29 @@ ul.off-canvas-list {
 	text-indent: 1em;
 }
 
-#languages, #categories, .navItem {
+#languages, #categories, .navItem, #languages2, #categories2, .navItem-mobile {
 	padding-left: 0.9375rem;
 }
 
-#accordion > h2 {
+#accordion > h2, .navItem-mobile {
 	font-family: "Sofia_Pro_Light";
 	text-transform: uppercase;
 	line-height: 2em;
 	font-size: 1.618em;
 	color: #fff;
 	background-color: #070707;
+}
+
+.navItem-mobile.add-resource {
+	background-color: #662b2b;
+}
+
+.navItem-mobile > a {
+	color: #E5E5E5;
+	&:active {
+		background-color: #fff;
+		color: #070707;
+	}
 }
 
 .search {

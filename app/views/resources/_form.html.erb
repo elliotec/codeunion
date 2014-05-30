@@ -11,11 +11,12 @@
     </div>
   <% end %>
 
-  <article class="form large-push-2 large-8 medium-push-1 medium-10 columns">
+  <article class="form large-8 columns">
     <%= f.label "name", :Title %>
     <%= f.text_field :name, placeholder: "Enter a brief description" %>
 
-    <%= f.text_area :body, :toolbar => 'mini' %>
+    <%= f.label "body", :"Post link to resource" %>
+    <%= f.text_area :body, :toolbar => 'mini', placeholder: "Feel free to leave helpful thoughts, too!" %>
 
     <%= f.label :category %>
     <%= f.collection_select :category_id, Category.all, :id, :name %>
@@ -25,6 +26,6 @@
 
 
     <%= f.submit %>
-   </article>
+  </article>
 
 <% end %>

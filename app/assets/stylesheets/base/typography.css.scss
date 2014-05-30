@@ -49,30 +49,17 @@
 	content: "\e60a";
 }
 
-.icon-arrow-up:before {
+.icon-menu:before {
 	content: "\e600";
 }
-.icon-arrow-down:before {
-	content: "\e601";
-}
+
 .icon-arrow-up2:before {
 	content: "\e602";
 }
 .icon-arrow-down2:before {
 	content: "\e603";
 }
-.icon-arrow-up3:before {
-	content: "\e604";
-}
-.icon-arrow-down3:before {
-	content: "\e605";
-}
-.icon-mail:before {
-	content: "\e606";
-}
-.icon-mail2:before {
-	content: "\e607";
-}
+
 .icon-facebook:before {
 	content: "\e608";
 }
@@ -108,6 +95,10 @@ h3, h4 {
 	color: #242F3A;
 }
 
+small {
+	font-size: 0.8em;
+}
+
 /* DECORATION */
 a, a:visited, a:hover {
 	text-decoration: none;
@@ -126,9 +117,6 @@ header > h1 {
 	letter-spacing: 0.02em;
 }
 
-// .page-title {
-// 	padding: 1rem 0 1.618rem 0;
-// 	font-family: "Sofia_Pro_Light";
-// 	color: #242F3A;
-// }
-
+p {
+	word-wrap: break-word;
+}

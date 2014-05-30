@@ -1,13 +1,21 @@
 
 <div class="hide-for-large-up">
-  <h2 id="nav">NAV</h2>
+  <!-- <h2 id="nav" class="hamburger icon-menu"></h2> -->
     <div class="navStuff">
       <section class="search">
         <%= form_tag resources_path, :method => :get do %>
           <%= text_field_tag :search, params[:search] %>
-          <%= submit_tag "S", :name => nil %>
+          <%= submit_tag nil, :class => "search-button", :value => "    " %>
         <% end %>
       </section>
+
+      <ul>
+        <% if user_signed_in? %>
+          <li class="navItem-mobile add-resource"><%= link_to '+ Resource', new_resource_path%></li>
+        <% else %>
+          <li class="navItem-mobile add-resource"><%= link_to '+ Resource', new_user_session_path %></li>
+        <% end %>
+      <ul>
 
       <ul id="accordion">
         <h2 id="languages2">Languages</h2>
@@ -31,13 +39,11 @@
 
       <ul>
         <% if user_signed_in? %>
-          <li class="navItem"><%= link_to "Account Settings", edit_user_registration_path%></li>
-          <li class="navItem"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-          <li class="navItem"><%= link_to '+ Resource', new_resource_path%></li>
+          <li class="navItem-mobile"><%= link_to "Account Settings", edit_user_registration_path%></li>
+          <li class="navItem-mobile"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li class="navItem"><%= link_to "Sign in", new_user_session_path %></li>
-          <li class="navItem"><%= link_to "Sign up", new_user_registration_path %></li>
-          <li class="navItem"><%= link_to '+ Resource', new_user_session_path %></li>
+          <li class="navItem-mobile"><%= link_to "Sign in", new_user_session_path %></li>
+          <li class="navItem-mobile"><%= link_to "Sign up", new_user_registration_path %></li>
         <% end %>
       <ul>
     </div>

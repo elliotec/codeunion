@@ -1,5 +1,61 @@
 .form {
 	background-color: #262525;
 	color: #E5E5E5;
+	padding: 0.5em 2em 2em 2em;
+	position: relative;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+}
+
+.form input, .form textarea, .form label {
+	display: block;
+	margin-top: 0.25em;
+}
+
+.form label {
+	padding-top: 1em;
+}
+
+input[type="email"], input[type="password"] {
+	width: 50%;
+}
+
+.form input[type="checkbox"] {
+	display: inline-block;
+	margin-top: 1em;
+}
+
+.form input[type="checkbox"] + label {
+	display: inline-block;
+}
+
+.form textarea, .form input[type="text"] {
+	width: 100%;
+	padding: .25em;
+}
+
+.form input[type="submit"], .form p {
+	margin-top: 2em;
+}
+
+.form > a {
+	color: #e5e5e5;
+	margin-top: 2em;
+}
+
+.form select {
+	background-color: #e5e5e5;
+	font-family: "Sofia_Pro_Light";
+	font-size: 1em;
+	text-transform: capitalize;
+	outline: none;
 
 }
+
+
+// .form p{
+// 	mar
+// }
+

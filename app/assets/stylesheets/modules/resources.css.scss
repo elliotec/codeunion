@@ -10,6 +10,10 @@
 	padding: 3em;
 }
 
+.resource-post p {
+	line-height: 1.5em;
+}
+
 .excerpt {
 	padding: 1em;
 }
@@ -36,7 +40,6 @@
 
 .excerpt-language {
 	background-color: lighten(desaturate(#662b2b, 15%), 15%);
-
 }
 
 .excerpt-category {
@@ -46,8 +49,6 @@
 .vote {
 	font-size: 1.618em;
 	text-align: center;
-
-
 }
 
 .vote-count {
