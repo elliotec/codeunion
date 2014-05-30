@@ -31,13 +31,11 @@
   <main class="large-9 columns">
       <h2><%= yield(:pagetitle) %></h2>
       <%= yield %>
+      <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert") %>
+      <% end %>
   </main>
 
-
-    <!--what does this do?-->
-    <% flash.each do |name, msg| %>
-    <%= content_tag(:div, msg, class: "alert alert-info hide") %>
-    <% end %>
 </body>
 
 </html>

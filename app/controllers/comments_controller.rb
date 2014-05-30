@@ -2,7 +2,8 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :set_user
 
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
+
   # before_filter do
   #   redirect_to new_user_session_path unless current_user.moderator == true
   # end
@@ -29,8 +30,9 @@ class CommentsController < ApplicationController
         format.html {redirect_to resource_url(@resource), notice: 'Comment was successfully created.' }
         format.json { render action: 'show', status: :created, location: @comment }
       else
-        format.html { render action: 'new' }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
+        format.html {redirect_to resource_url(@resource), notice: 'Comment box cannot be empty.' }
+        # format.html { render action: 'new' }
+        # format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -59,7 +61,7 @@ class CommentsController < ApplicationController
 
 
     def admin?
-      self.moderator == true
+      current_user.moderator == true
     end
 
     def set_comment
