@@ -10,25 +10,23 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :name, class:"hiddenlabel" %>
-    <%= f.text_field :name, placeholder: "name" %>
-  </div>
-  <br>
+
+  <article class="form large-push-2 large-8 medium-push-1 medium-10 columns">
+    <%= f.label "name", :Title %>
+    <%= f.text_field :name, placeholder: "Enter a brief description" %>
+
+
 
     <%= f.text_area :body, :toolbar => 'mini' %>
 
-  <div class="field">
     <%= f.label :category %>
     <%= f.collection_select :category_id, Category.all, :id, :name %>
-  </div>
 
-  <div class="field">
     <%= f.label :language %>
     <%= f.collection_select :language_id, Language.all, :id, :name %>
-  </div>
 
-  <div class="actions">
+
     <%= f.submit %>
-  </div>
+   </article>
+
 <% end %>
